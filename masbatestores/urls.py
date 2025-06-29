@@ -2,7 +2,11 @@
 URL configuration for masbatestores project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
+<<<<<<< HEAD
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
+=======
+    https://docs.djangoproject.com/en/5.2/topics/http/urls/
+>>>>>>> 792e715d36cc695a23c91382c01e9397c1352c5a
 Examples:
 Function views
     1. Add an import:  from my_app import views
