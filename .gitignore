@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-venv/
-=======
+
 
 # Windows thumbnail cache files
 Thumbs.db
@@ -57,4 +55,3 @@ __pycache__/
 
 
 test.py
->>>>>>> 792e715d36cc695a23c91382c01e9397c1352c5a
