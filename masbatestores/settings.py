@@ -112,11 +112,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-<<<<<<< HEAD
+
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
-=======
-# https://docs.djangoproject.com/en/5.2/topics/i18n/
->>>>>>> 792e715d36cc695a23c91382c01e9397c1352c5a
 
 LANGUAGE_CODE = 'en-us'
 
@@ -128,20 +125,11 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-<<<<<<< HEAD
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
-
-STATIC_URL = 'static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-=======
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
->>>>>>> 792e715d36cc695a23c91382c01e9397c1352c5a
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
