@@ -1,3 +1,6 @@
+
+var DEFAULT_LOCATION = [12.371461264522235, 123.62375723675078]
+
 // Define tile layers
 var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap contributors'
@@ -9,7 +12,7 @@ var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/service
 
 // Initialize the map with satellite as default
 var map = L.map('map', {
-  center: [12.375325409266404, 123.63267841062742],
+  center: DEFAULT_LOCATION,
   zoom: 13,
   zoomControl: false,
   layers: [satellite] // default layer

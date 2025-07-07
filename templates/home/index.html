@@ -12,8 +12,51 @@
 
 
 {% block bodyblock %}
-    <div id="map">
+    <!--Map Layout-->
+    <div id="map"> </div>
 
+    <!-- Search Box -->
+    <div class="search-box-container">
+        <input type="text" id="search-box" placeholder="Humanap ng tindahan o produkto . . ." class="poppins-light">
+        <div class="map-mini-info-container">
+            <div class="map-mini-info">
+                <img src="{% static 'assets/guest-green-store.png' %}" alt="">
+                <span class="poppins-light">Open Store</span>
+            </div>
+            <div class="map-mini-info">
+                <img src="{% static 'assets/guest-gray-store.png' %}" alt="">
+                <span class="poppins-light">Close Store</span>
+            </div>
+        </div>
     </div>
+
+    <!-- Action Buttons -->
+    <div class="actions-container">
+        <div class="action-button">
+            <img src="{% static 'assets/guest-search-icon.png' %}" alt=""> 
+        </div>
+        <div class="action-button">
+            <img src="{% static 'assets/guest-person-circle.png' %}" alt=""> 
+            <span class="poppins-light">near me</span>
+        </div>
+        <div class="action-button">
+            <img src="{% static 'assets/guest-3-fold-map.png' %}" alt=""> 
+            <span class="poppins-light">maps</span>
+        </div>
+        <div class="action-button">
+            <img src="{% static 'assets/guest-user-account.png' %}" alt=""> 
+            <span class="poppins-light">account</span>
+        </div>
+        <div class="action-button">
+            <img src="{% static 'assets/guest-merchant-account.png' %}" alt=""> 
+            <span class="poppins-light">tindahan</span>
+        </div>
+        <div class="action-button">
+            <img src="{% static 'assets/guest-calculator.png' %}" alt=""> 
+            <span class="poppins-light">calculator</span>
+        </div>
+    </div>
+
+
 {% endblock bodyblock %}
     
