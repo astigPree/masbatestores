@@ -12,6 +12,10 @@
 
 
 {% block bodyblock %}
+    <script>
+        
+    </script>
+
     <!--Map Layout-->
     <div id="map"> </div>
 
@@ -35,11 +39,11 @@
         <div class="action-button">
             <img src="{% static 'assets/guest-search-icon.png' %}" alt=""> 
         </div>
-        <div class="action-button">
+        <div class="action-button" id="near-me-button">
             <img src="{% static 'assets/guest-person-circle.png' %}" alt=""> 
             <span class="poppins-light">near me</span>
         </div>
-        <div class="action-button">
+        <div class="action-button" id="map-button">
             <img src="{% static 'assets/guest-3-fold-map.png' %}" alt=""> 
             <span class="poppins-light">maps</span>
         </div>
@@ -57,6 +61,11 @@
         </div>
     </div>
 
+
+    <!-- Term And Conditions -->
+    <div class="term-conditons-container">
+        
+    </div>
 
 {% endblock bodyblock %}
     

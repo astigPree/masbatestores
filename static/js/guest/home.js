@@ -13,19 +13,33 @@ var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/service
 // Initialize the map with satellite as default
 var map = L.map('map', {
   center: DEFAULT_LOCATION,
-  zoom: 13,
+  zoom: 15,
   zoomControl: false,
   layers: [satellite] // default layer
 });
 
-// // Add marker
-// L.marker([12.375325409266404, 123.63267841062742]).addTo(map)
-//   .bindPopup('Hello from Masbate!')
-//   .openPopup();
+ 
+var customIcon = L.icon({
+    iconUrl: '/static/assets/guest-current-location.png', // Replace with your image path
+    iconSize: [24, 32],       // Size of the icon
+    iconAnchor: [16, 32],     // Point of the icon which corresponds to marker location
+    popupAnchor: [0, -32]     // Where the popup opens relative to the iconAnchor
+});
+var openStoreIcon = L.icon({
+    iconUrl: '/static/assets/guest-green-store.png', // Replace with your image path
+    iconSize: [32, 32],       // Size of the icon
+    iconAnchor: [16, 32],     // Point of the icon which corresponds to marker location
+    popupAnchor: [0, -32]     // Where the popup opens relative to the iconAnchor
+});
+var closeStoreIcon = L.icon({
+    iconUrl: '/static/assets/guest-gray-store.png', // Replace with your image path
+    iconSize: [32, 32],       // Size of the icon
+    iconAnchor: [16, 32],     // Point of the icon which corresponds to marker location
+    popupAnchor: [0, -32]     // Where the popup opens relative to the iconAnchor
+});
 
-
-var currentLayer = 'satellite';
-
+ 
+var currentLayer = 'satellite'; 
 function toggleMap() {
   if (currentLayer === 'satellite') {
     map.removeLayer(satellite);
@@ -37,3 +51,44 @@ function toggleMap() {
     currentLayer = 'satellite';
   }
 }
+
+
+var current_marker = null;
+function getStoreNearMe(){
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+        var lat = position.coords.latitude;
+        var lng = position.coords.longitude;
+
+        // Center map on your location
+        map.setView([lat, lng], 15);
+
+        if (current_marker) {
+            map.removeLayer(current_marker);
+        }
+        // Add a marker for current location
+        current_marker = L.marker([lat, lng], {
+            icon: customIcon
+        }).addTo(map)
+        .bindPopup('You are here!')
+        .openPopup();
+  
+    }, function(error) {
+        console.error("Error getting location: ", error);
+    });
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
+
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function() {  
+
+
+    getStoreNearMe();
+    document.getElementById("near-me-button").addEventListener("click", getStoreNearMe);
+    document.getElementById("map-button").addEventListener("click", toggleMap);
+
+})
