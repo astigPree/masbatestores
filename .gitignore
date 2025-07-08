@@ -48,7 +48,14 @@ venv/
 
 
 #migrations
+website/migrations/
 masbatestores/website/migrations/
+api/
+masbatestores/api/
+
+
+
+
 
 #pycache
 __pycache__/
