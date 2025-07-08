@@ -1,77 +1,17 @@
-{% extends "base.html" %}
-{% load static %}
 
 
-{% block headblock %}
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <link rel="stylesheet" href="{% static 'css/guest/home.css' %}">
-    <script src="{% static 'js/guest/addition_dom.js' %}" defer></script>
-    <script src="{% static 'js/guest/home.js' %}" defer></script>
-{% endblock headblock %}
-
-
-
-{% block bodyblock %}
-    <script>
-        
-    </script>
-
-    <!--Map Layout-->
-    <div id="map"> </div>
-
-    <!-- Search Box -->
-    <div class="search-box-container">
-        <input type="text" id="search-box" placeholder="Humanap ng tindahan o produkto . . ." class="poppins-light">
-        <div class="map-mini-info-container">
-            <div class="map-mini-info">
-                <img src="{% static 'assets/guest-green-store.svg' %}" alt="">
-                <span class="poppins-light">Open Store</span>
-            </div>
-            <div class="map-mini-info">
-                <img src="{% static 'assets/guest-gray-store.svg' %}" alt="">
-                <span class="poppins-light">Close Store</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Action Buttons -->
-    <div class="actions-container">
-        <div class="action-button">
-            <img src="{% static 'assets/guest-search-icon.svg' %}" alt=""> 
-        </div>
-        <div class="action-button" id="near-me-button">
-            <img src="{% static 'assets/guest-person-circle.svg' %}" alt=""> 
-            <span class="poppins-light">near me</span>
-        </div>
-        <div class="action-button" id="map-button">
-            <img src="{% static 'assets/guest-3-fold-map.svg' %}" alt=""> 
-            <span class="poppins-light">maps</span>
-        </div>
-        <div class="action-button">
-            <img src="{% static 'assets/guest-user-account.svg' %}" alt=""> 
-            <span class="poppins-light">account</span>
-        </div>
-        <div class="action-button">
-            <img src="{% static 'assets/guest-merchant-account.svg' %}" alt=""> 
-            <span class="poppins-light">tindahan</span>
-        </div>
-        <div class="action-button">
-            <img src="{% static 'assets/guest-calculator.svg' %}" alt=""> 
-            <span class="poppins-light">calculator</span>
-        </div>
-    </div>
-
-
+function term_and_conditions_dom(){
+    return (
+        ` 
     <!-- Term And Conditions -->
-    {% comment %} <div class="term-conditions-container">
+    <div class="term-conditions-container">
         <div class="term-conditions-wrapper">
 
             <!-- Term and condition button -->
             <div class="term-conditions-buttons"> 
-                <div class="term-conditions-button">
+                <div class="term-conditions-button" id="term-conditions-button">
                     <span class="poppins-light">Nabasa ko na ito</span>
-                    <img src="{% static 'assets/back-down-icon.svg' %}" alt=""> 
+                    <img src="/static/assets/back-down-icon.svg" alt=""> 
                 </div> 
             </div>
 
@@ -146,13 +86,8 @@
             </div>
             
         </div>
-    </div> {% endcomment %}
-
-
-    <!-- Store Section -->
-    <div class="store-section-container">
-        
     </div>
 
-{% endblock bodyblock %}
-    
+`
+    )
+}

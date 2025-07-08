@@ -1,4 +1,7 @@
 
+var main_holder = document.getElementById('main-holder');
+
+
 var DEFAULT_LOCATION = [12.371461264522235, 123.62375723675078]
 
 // Define tile layers
@@ -20,19 +23,19 @@ var map = L.map('map', {
 
  
 var customIcon = L.icon({
-    iconUrl: '/static/assets/guest-current-location.png', // Replace with your image path
+    iconUrl: '/static/assets/guest-current-location.svg', // Replace with your image path
     iconSize: [24, 32],       // Size of the icon
     iconAnchor: [16, 32],     // Point of the icon which corresponds to marker location
     popupAnchor: [0, -32]     // Where the popup opens relative to the iconAnchor
 });
 var openStoreIcon = L.icon({
-    iconUrl: '/static/assets/guest-green-store.png', // Replace with your image path
+    iconUrl: '/static/assets/guest-green-store.svg', // Replace with your image path
     iconSize: [32, 32],       // Size of the icon
     iconAnchor: [16, 32],     // Point of the icon which corresponds to marker location
     popupAnchor: [0, -32]     // Where the popup opens relative to the iconAnchor
 });
 var closeStoreIcon = L.icon({
-    iconUrl: '/static/assets/guest-gray-store.png', // Replace with your image path
+    iconUrl: '/static/assets/guest-gray-store.svg', // Replace with your image path
     iconSize: [32, 32],       // Size of the icon
     iconAnchor: [16, 32],     // Point of the icon which corresponds to marker location
     popupAnchor: [0, -32]     // Where the popup opens relative to the iconAnchor
@@ -86,9 +89,16 @@ function getStoreNearMe(){
 
 document.addEventListener("DOMContentLoaded", function() {  
 
-
+  // Get the save session before that tell user view the term and condition
+  var isviewedbefore = localStorage.getItem('isviewedbefore');
+  if (!isviewedbefore) {
+    localStorage.setItem('isviewedbefore', true);
+    // main_holder.insertAdjacentHTML("afterbegin", term_and_conditions_dom());
+  } else{
     getStoreNearMe();
     document.getElementById("near-me-button").addEventListener("click", getStoreNearMe);
     document.getElementById("map-button").addEventListener("click", toggleMap);
+  }
+
 
 })
