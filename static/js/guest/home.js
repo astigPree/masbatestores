@@ -3,6 +3,7 @@ var main_holder = document.getElementById('main-holder');
 
 
 var DEFAULT_LOCATION = [12.371461264522235, 123.62375723675078]
+var map = null; // Global variable to hold the map instance
 
 // Define tile layers
 var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -13,13 +14,6 @@ var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/service
   attribution: 'Tiles © Esri'
 });
 
-// Initialize the map with satellite as default
-var map = L.map('map', {
-  center: DEFAULT_LOCATION,
-  zoom: 15,
-  zoomControl: false,
-  layers: [satellite] // default layer
-});
 
  
 var customIcon = L.icon({
@@ -57,11 +51,88 @@ function toggleMap() {
 
 
 var current_marker = null;
+var is_first_time_load = true;
+
+function displayStores(stores){
+  // Display the store list dom
+  var storeList = document.getElementById('store-list-container');
+  if (storeList) {
+    // The store list is already displayed
+    // Do nothing
+    console.log('Store list is already displayed');
+    return;
+  }
+  main_holder.insertAdjacentHTML("afterbegin", store_list_dom());
+
+  setTimeout(() => {
+    storeList = document.getElementById('store-list-container');
+    const store_list_close_button = document.getElementById('close-store-list-button');
+
+    const handleClose = function () {
+      storeList.classList.remove('animate-in');
+      storeList.classList.add('animate-out');
+
+      storeList.addEventListener('animationend', function handleAnimationEnd() {
+        storeList.remove();
+        storeList.removeEventListener('animationend', handleAnimationEnd); 
+        // ✅ Clean up this click listener too
+        store_list_close_button.removeEventListener('click', handleClose);
+      });
+    };
+
+    store_list_close_button.addEventListener('click', handleClose);
+  }, 0);
+}
+
+function displayEmtpyStores(){
+  // Display the store empty list dom
+  var storeList = document.getElementById('store-empty-list-container');
+  if (storeList) {
+    // The store list is already displayed
+    // Do nothing
+    console.log('Store list is already displayed');
+    return;
+  }
+  main_holder.insertAdjacentHTML("afterbegin", store_empty_list_dom());
+
+  setTimeout(() => {
+    storeList = document.getElementById('store-empty-list-container');
+    const store_list_close_button = document.getElementById('store-empty-list-button');
+
+    const handleClose = function () {
+      storeList.classList.remove('animate-in');
+      storeList.classList.add('animate-out');
+
+      storeList.addEventListener('animationend', function handleAnimationEnd() {
+        storeList.remove();
+        storeList.removeEventListener('animationend', handleAnimationEnd); 
+        // ✅ Clean up this click listener too
+        store_list_close_button.removeEventListener('click', handleClose);
+      });
+    };
+
+    store_list_close_button.addEventListener('click', handleClose);
+  }, 0);
+
+}
+
 function getStoreNearMe(){
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
         var lat = position.coords.latitude;
         var lng = position.coords.longitude;
+        
+        if (!map) {
+            // Initialize the map with satellite as default
+            map = L.map('map', {
+                center: [lat, lng],
+                zoom: 15,
+                zoomControl: false,
+                layers: [satellite] // default layer
+            });
+          } else{
+            map.setView([lat, lng], 15);
+          }
 
         // Center map on your location
         map.setView([lat, lng], 15);
@@ -75,15 +146,48 @@ function getStoreNearMe(){
         }).addTo(map)
         .bindPopup('You are here!')
         .openPopup();
+
+        // If there is so many stores then display the store list
+        // if (stores.length > 0) {
+        // } else {
+        stores = [232];
+        // displayStores(stores);
+        // }
+        if (!is_first_time_load && stores.length > 0) {
+            displayStores(stores);
+        }
+
+        // if there is no stores then display the empty store list
+        if (stores.length === 0 && !is_first_time_load) {
+            displayEmtpyStores();
+        }
   
+        is_first_time_load = false;
     }, function(error) {
         console.error("Error getting location: ", error);
+        // Initialize the map with satellite as default
+        map = L.map('map', {
+          center: DEFAULT_LOCATION,
+          zoom: 15,
+          zoomControl: false,
+          layers: [satellite] // default layer
+        });
+
     });
     } else {
         alert("Geolocation is not supported by this browser.");
+        map = L.map('map', {
+          center: DEFAULT_LOCATION,
+          zoom: 15,
+          zoomControl: false,
+          layers: [satellite] // default layer
+        });
+
     }
 
 }
+
+
 
 
 
@@ -99,6 +203,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("near-me-button").addEventListener("click", getStoreNearMe);
     document.getElementById("map-button").addEventListener("click", toggleMap);
   }
+ 
 
 
 })

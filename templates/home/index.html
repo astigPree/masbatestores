@@ -150,7 +150,7 @@
 
 
     <!-- Store Section List -->
-    <div class="store-section-list-container">
+    {% comment %} <div class="store-section-list-container" id="store-list-container">
         <div class="store-section-header">
             <div class="store-section-header-title">
                 <img src="{% static 'assets/guest-brown-store.svg' %}" alt="">
@@ -181,7 +181,7 @@
                     <div class="store-info-container">
                         <h3 class="poppins-semibold ellipsis">Guanzon Store fadsfsdfsdf sf dsfsafds</h3>
                         <h5 class="poppins-medium ellipsis">Barangay Ibingay Boulevard Mfdsfasbate Cityf adsdfddsfsd</h5>
-                        <div class="store-info-products-container">
+                        <div class="store-info-products-container scrollable-div">
                             <!-- Store List  -->    
                             <div class="store-info-products">
 
@@ -240,7 +240,7 @@
                     <div class="store-info-container">
                         <h3 class="poppins-semibold ellipsis">Guanzon Store fadsfsdfsdf sf dsfsafds</h3>
                         <h5 class="poppins-medium ellipsis">Barangay Ibingay Boulevard Mfdsfasbate Cityf adsdfddsfsd</h5>
-                        <div class="store-info-products-container">
+                        <div class="store-info-products-container  scrollable-div">
                             <!-- Store List  -->    
                             <div class="store-info-products">
 
@@ -296,7 +296,141 @@
 
         </div>
 
+    </div> {% endcomment %}
+
+    <!-- Store Section List Empty -->
+    {% comment %} <div class="store-section-list-container animate-in" id="store-empty-list-container">
+        <div class="store-section-header">
+            <div class="store-section-header-title">
+                <img src="{% static 'assets/guest-brown-store.svg' %}" alt="">
+                <h3 class="poppins-semibold ellipsis">Tindahang Malapit sa akin</h3>
+
+            </div>
+
+            <div class="store-section-header-button" id="store-empty-list-button">
+                <span class="poppins-light">Close</span>
+                <img src="{% static 'assets/back-left-angled.svg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="store-section-divider">
+            <span></span>
+        </div>
+
+        <div class="stores-section-stores-list">
+            <div class="store-section-stores-list-wrapper">
+                  <img class="store-section-empty-icon" src="{% static 'assets/guest-store-human-empty.svg' %}" alt="">
+                  <h3 class="store-section-empy-text poppins-bold">Walang malapit na tindahan sa iyo</h3>
+
+            </div>
+
+        </div>
+
+    </div>  {% endcomment %}
+
+    <!-- Store Visit Screen TODO: FINISH UP THE DESIGN -->
+    {% comment %} <div class="store-section-list-container animate-in" id="store-visit-container">
+        <div class="store-section-header">
+            <div class="store-section-header-title">
+                <img src="{% static 'assets/guest-brown-store.svg' %}" alt="">
+                <h3 class="poppins-semibold ellipsis">Tindahang Malapit sa akin</h3>
+
+            </div>
+
+            <div class="store-section-header-button" id="store-visit-button">
+                <span class="poppins-light">Close</span>
+                <img src="{% static 'assets/back-left-angled.svg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="store-section-divider">
+            <span></span>
+        </div>
+
+        <div class="stores-section-stores-list">
+            <div class="store-section-stores-list-wrapper">
+
+                <!-- Store Button Header -->
+                <div class="store-visit-header">
+                    <button>
+                        <img src="{% static 'assets/guest-arrow-right.svg' %}" alt="">
+                        <span class="poppins-medium">Tumingin sa iba</span>
+                    </button>
+                    <button>
+                        <span class="poppins-medium">Kausapin sila</span>
+                        <img src="{% static 'assets/guest-messenger.svg' %}" alt="">
+                    </button>
+                </div>
+
+                <!-- Store Background Image -->
+                <div class="store-background-image-container">
+                    <img src="" alt="">
+                    <div class="store-reviews-container">
+                        <span class="poppins-semibold">100k Reviews</span>
+                        <img src="{% static 'assets/guest-reviews-icon.svg' %}" alt="">
+                    </div>
+                </div>
+
+                <!-- Store Profile Data -->
+                <div class="store-profile-data-container">
+                    <div class="store-profile-image-container">
+                        <img src="{% static 'assets/guest-store-human.svg' %}" class="store-image-profile-svg" alt="">
+                        <img src="{% static 'assets/guest-green-store.svg' %}" class="store-image-status" alt="">
+                    </div>
+
+                    <div class="store-profile-data-info-container">
+                        <h3 class="poppins-semibold ellipsis">Guanzon Store dsadasd dsasd</h3>
+                        <h5 class="poppins-medium ellipsis">Barangay Ibingay Boulevard Masbate City</h5>
+                    </div>
+
+                    <div class="store-profile-data-actions-container">
+                        <h4 class="poppins-bold ellipsis">7:45 am - 5:56 pm</h4> 
+                    </div>
+
+                    <div class="store-profile-distance-container">
+                        <div class="store-profile-distance-data">
+                            <span class="poppins-regular">10 hours 12 mins</span>
+                            <img src="{% static 'assets/guest-car.svg' %}" alt="">
+                        </div>
+                        <div class="store-profile-distance-data">
+                            <span class="poppins-regular">10 hours 12 mins</span>
+                            <img src="{% static 'assets/guest-motor.svg' %}" alt="">
+                        </div>
+                        <div class="store-profile-distance-data">
+                            <span class="poppins-regular">10 hours 12 mins</span>
+                            <img src="{% static 'assets/guest-walk.svg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Store Profile Bio -->
+                <div class="store-bio-container">
+                    <p class="poppins-light-italic">
+                        Maligayang pagdating sa TechHub—ang iyong one-stop shop para sa makabagong gadgets at accessories. Pinagsasama namin ang de-kalidad na produkto, personalisadong serbisyo, at walang katulad na halaga sa bawat pagbili. Sumali na at i-level up ang iyong tech experience!
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div> {% endcomment %}
+
+    <!-- View Store Facebook Account-->
+    <div class="store-facebook-container">
+        <div class="store-facebook-wrapper">
+            <!-- Term and condition button -->
+            <div class="term-conditions-buttons"> 
+                <div class="term-conditions-button">
+                    <span class="poppins-light">Nabasa ko na ito</span>
+                    <img src="{% static 'assets/back-down-icon.svg' %}" alt=""> 
+                </div> 
+            </div>
+
+
+        </div>
     </div>
+
 
 {% endblock bodyblock %}
     
