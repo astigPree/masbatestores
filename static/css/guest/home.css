@@ -419,7 +419,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 10px;
+    margin: 0 10px 0 10px;
     width: 55%;
 }
 
@@ -493,8 +493,7 @@
 .store-actions-container{
     width: 25%;
     height: 100%; 
-    position: absolute;
-    right: 0;
+    margin-left: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -513,8 +512,8 @@
 .store-action-wrapper{
     display: flex;
     height: 80%;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right: 12px;
     align-items: center; 
     width: 100%;
 }
