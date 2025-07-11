@@ -2,16 +2,23 @@ body {
   background-color: #644839;
 }
 
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  align-items: center;      
+  min-height: 100vh;
+}
+
 /* login top part */
 .login-desc {
-  margin-top: 2em;
   text-align: center;
   color: #CCAFA0;
 }
 
 .login-desc h1{
   font-size: 1.5rem;
-  margin: 0.25em 0 0.25em 0;
+  margin: 0.5em 0 0.5em 0;
 }
 
 .login-desc p {
@@ -29,17 +36,21 @@ body {
   margin-bottom: 1em;
 }
 
+.login-desc img {
+  min-width: 146px;
+}
+
 .login svg{
   color: #3D1A07;
 }
 
 /* form */
 .login-form{
-  width: 75%;
+  width: 85%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.75em;
 }
 
 .creds {
@@ -100,20 +111,21 @@ body {
 }
 
 hr {
+  width: 85%;
   border: 1px solid #3D1A07;
-  margin: 1em 0 1em 0;
+  margin: 2em 0;
 }
 
 /* bot-cta */
 .signup-cta {
   display: flex;
   justify-content: center;
+  gap: 1em;
   margin: 0 auto;
 }
 
 .right-signup {
   width: 45%;
-  max-width: 210px;
   display: flex;
   flex-direction: column;
   justify-content: center;

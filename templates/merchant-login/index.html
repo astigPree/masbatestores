@@ -1,6 +1,7 @@
 {% load static %}
 
 {% block headblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="{% static 'css/merchant/merchant-login.css' %}">
@@ -10,7 +11,7 @@
 {% endblock headblock %}
 
 {% block bodyblock %}
-
+<div class="login-wrapper">
     <div class="login-desc">
         <img src="{% static 'assets/guest-store-human-empty.svg' %}" alt="Guest Store">
         <h1 class="poppins-semibold">Masbatestores</h1>
@@ -79,5 +80,6 @@
             </button>
         </div>
     </div>
+</div><!--login-wrapper-->
 {% endblock bodyblock %}
     
