@@ -30,10 +30,13 @@ body {
 
 .login-desc .login-title {
   font-size: 0.688rem;
+  margin-bottom: 1em;
 }
 
-.login-desc .login-title {
-  margin-bottom: 1em;
+.login-title {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
 }
 
 .login-desc img {
@@ -79,7 +82,6 @@ body {
 .creds input,
 .creds input::placeholder {
   color: #644839;
-  opacity: 0.7;
 }
 
 .creds input {
@@ -93,6 +95,10 @@ body {
   outline: none;
   color: #3D1A07;
   opacity: 1;
+}
+
+.creds input:not(:placeholder-shown) {
+  color: #3D1A07;
 }
 
 .login {

@@ -6,3 +6,6 @@ def home_page(request):
 
 def merchant_login(request):
     return render(request, "merchant-login/index.html")
+
+def merchant_page(request):
+    return render(request, "merchant-page/index.html")
