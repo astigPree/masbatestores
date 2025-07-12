@@ -149,19 +149,17 @@ body {
 
 .product-services-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   width: 90%;
   margin: 0 auto;
   place-items: center;
   gap: 1em;
 }
 
-.product-services-list > * {
-  box-sizing: border-box;
-  width: 100%;
-}
-
+/* grid items */
 .offer-wrapper {
+  width: 100%;
+  max-width: 160px; /* adjust later on for pc */
   background-color: #916E5C;
   border-radius: 4px;
 }
@@ -171,6 +169,7 @@ body {
   margin: 0.5em auto;
 }
 
+/* pagkaon / serbisyo */
 .offer-type {
   width: 50%;
   margin-left: auto;
@@ -197,7 +196,10 @@ body {
   padding-left: 4px;
 }
 
+/* name / price */
 .offer-item {
+  width: 100%;  
+  overflow: hidden;
   font-size: 8px;
   background-color: #CCAFA0;
   color: #3D1A07;
@@ -205,7 +207,7 @@ body {
   border-radius: 0 0 4px 4px;
 }
 
-.offer-item p.poppins-regular {
+.offer-item p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
