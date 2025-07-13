@@ -3,13 +3,17 @@ from datetime import datetime
 # Create your models here.
 
 class MerchantData(models.Model):
+    base_pk = models.BigIntegerField(null=True, blank=True)
     name = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
     description = models.CharField(max_length=320)
-    latitude = models.FloatField()   
-    longitude = models.FloatField()
-    hours = models.JSONField()
-
+    latitude = models.FloatField(null=True, blank=True)   
+    longitude = models.FloatField( null=True, blank=True)
+    hours = models.JSONField(default=dict)
+    profile = models.ImageField(null=True, blank=True , upload_to='merchant/')
+    background = models.ImageField(null=True, blank=True , upload_to='merchant_background/')
+    created_at = models.DateTimeField(auto_now_add=True)
+    
 
     def coordinates(self):
         return (self.latitude, self.longitude)
@@ -50,4 +54,50 @@ class MerchantData(models.Model):
     #    "sunday":    null
     #}
 
- 
+
+class Paninda(models.Model):
+    merchant_pk = models.BigIntegerField(null=True, blank=True)
+    name = models.CharField(max_length=100)
+    price = models.FloatField(null=True, blank=True)
+    availability = models.CharField(
+        max_length=100,
+        choices=[
+            ("Laging Available", "Laging Available"),
+            ("Available sa Umaga", "Available sa Umaga"),
+            ("Available sa Hapon", "Available sa Hapon"),
+            ("Available sa Gabi", "Available sa Gabi"),
+            ("Hindi Available", "Hindi Available")
+        ]
+    )
+    uri = models.CharField(
+        max_length=100,
+        choices=[
+            ("Produkto", "Produkto"),
+            ("Serbisyo", "Serbisyo")
+        ]
+    )
+    image = models.ImageField(null=True, blank=True , upload_to='paninda/')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+
+
+
+class MerchantReviews(models.Model):
+    user_pk = models.BigIntegerField(null=True, blank=True)
+    merchant_pk = models.BigIntegerField(null=True, blank=True)
+    review = models.CharField(max_length=1000)
+    rating = models.IntegerField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    reviewed_item = models.CharField(max_length=100)
+    
+class MerchantReviewReplies(models.Model):
+    user_pk = models.BigIntegerField(null=True, blank=True)
+    merchant_pk = models.BigIntegerField(null=True, blank=True)
+    review_pk = models.BigIntegerField(null=True, blank=True)
+    reply = models.CharField(max_length=1000)
+    created_at = models.DateTimeField(auto_now_add=True)    
+
+
+
+# TODO: FUCOS ON WORKING ON IN USER SCREEN TO CREATE USER MODEL
+
