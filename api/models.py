@@ -50,4 +50,4 @@ class MerchantData(models.Model):
     #    "sunday":    null
     #}
 
-
+ 

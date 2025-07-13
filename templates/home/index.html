@@ -62,6 +62,33 @@
         </div>
     </div>
 
+    <!-- Action Hint Text -->
+    
+    {% comment %} <div class="actions-hint-container">
+        <div class="action-hint-text-empty"> 
+        </div>
+        <div class="action-hint-text" >
+            <span class="poppins-regular">Tingnan ang Mga Tindahan Sa loob ng 10km</span>
+            <img src="{% static 'assets/guest-arrow-hint-text.svg' %}" alt="">
+        </div>
+        <div class="action-hint-text" >
+            <span class="poppins-regular">Palitan ang Hitsura ng Mapa</span>
+            <img src="{% static 'assets/guest-arrow-hint-text.svg' %}" alt="">
+        </div>
+        <div class="action-hint-text">
+            <span class="poppins-regular">Tingnan ang Screen para sa Customer o User</span>
+            <img src="{% static 'assets/guest-arrow-hint-text.svg' %}" alt="">
+        </div>
+        <div class="action-hint-text">
+            <span class="poppins-regular">Tingnan ang Screen para sa Merchant</span>
+            <img src="{% static 'assets/guest-arrow-hint-text.svg' %}" alt="">
+        </div>
+        <div class="action-hint-text">
+            <span class="poppins-regular">Tingnan ang Detalye ng Paninda at Kalkulasyon</span>
+            <img src="{% static 'assets/guest-arrow-hint-text.svg' %}" alt="">
+        </div>
+    </div> {% endcomment %}
+
 
     <!-- Term And Conditions -->
     {% comment %} <div class="term-conditions-container">
@@ -150,7 +177,7 @@
 
 
     <!-- Store Section List -->
-    <div class="store-section-list-container" id="store-list-container">
+    {% comment %} <div class="store-section-list-container" id="store-list-container">
         <div class="store-section-header">
             <div class="store-section-header-title">
                 <img src="{% static 'assets/guest-brown-store.svg' %}" alt="">
@@ -296,7 +323,7 @@
 
         </div>
 
-    </div> 
+    </div> {% endcomment %}
 
     <!-- Store Section List Empty -->
     {% comment %} <div class="store-section-list-container animate-in" id="store-empty-list-container">
@@ -328,7 +355,7 @@
 
     </div>  {% endcomment %}
 
-    <!-- Store Visit Screen TODO: FINISH UP THE DESIGN -->
+    <!-- Store Visit Screen -->
     {% comment %} <div class="store-section-list-container animate-in" id="store-visit-container">
         <div class="store-section-header">
             <div class="store-section-header-title">
@@ -347,7 +374,7 @@
             <span></span>
         </div>
 
-        <div class="stores-section-stores-list">
+        <div class="stores-section-stores-list scrollable-div">
             <div class="store-section-stores-list-wrapper">
 
                 <!-- Store Button Header -->
@@ -410,27 +437,280 @@
                     </p>
                 </div>
 
+                <!-- Store Product Display -->
+                <div class="store-product-container">
+
+                    <div class="store-product">
+
+                        <div class="store-product-image">
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="" class="store-product-image-svg" >
+                        </div>
+                        
+                        <div class="store-product-category">
+                            <span class="poppins-light">Produkto</span>
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="">
+                        </div>
+                        
+                        <img src="{% static 'assets/guest-selected-green-product.svg' %}" alt="" class="store-product-selected">
+
+                        <div class="store-product-available">
+                            <span class="poppins-light">Available sa Gabi</span>
+                        </div>
+                        <div class="store-product-info-container">
+                            <h5 class="poppins-regular ellipsis"> Hamburger Ni Titas sa kanto</h5>
+                            <h4 class="poppins-bold ellipsis">P 1,500.00</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="store-product">
+
+                        <div class="store-product-image">
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="" class="store-product-image-svg" >
+                        </div>
+                        
+                        <div class="store-product-category">
+                            <span class="poppins-light">Produkto</span>
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="">
+                        </div>
+                        
+                        <img src="{% static 'assets/guest-selected-green-product.svg' %}" alt="" class="store-product-selected">
+
+                        <div class="store-product-available">
+                            <span class="poppins-light">Available sa Gabi</span>
+                        </div>
+                        <div class="store-product-info-container">
+                            <h5 class="poppins-regular ellipsis"> Hamburger Ni Titas sa kanto</h5>
+                            <h4 class="poppins-bold ellipsis">P 1,500.00</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="store-product">
+
+                        <div class="store-product-image">
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="" class="store-product-image-svg" >
+                        </div>
+                        
+                        <div class="store-product-category">
+                            <span class="poppins-light">Produkto</span>
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="">
+                        </div>
+                        
+                        <img src="{% static 'assets/guest-selected-green-product.svg' %}" alt="" class="store-product-selected">
+
+                        <div class="store-product-available">
+                            <span class="poppins-light">Available sa Gabi</span>
+                        </div>
+                        <div class="store-product-info-container">
+                            <h5 class="poppins-regular ellipsis"> Hamburger Ni Titas sa kanto</h5>
+                            <h4 class="poppins-bold ellipsis">P 1,500.00</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="store-product">
+
+                        <div class="store-product-image">
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="" class="store-product-image-svg" >
+                        </div>
+                        
+                        <div class="store-product-category">
+                            <span class="poppins-light">Produkto</span>
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="">
+                        </div>
+                        
+                        <img src="{% static 'assets/guest-selected-green-product.svg' %}" alt="" class="store-product-selected">
+
+                        <div class="store-product-available">
+                            <span class="poppins-light">Available sa Gabi</span>
+                        </div>
+                        <div class="store-product-info-container">
+                            <h5 class="poppins-regular ellipsis"> Hamburger Ni Titas sa kanto</h5>
+                            <h4 class="poppins-bold ellipsis">P 1,500.00</h4>
+                        </div>
+
+                    </div>
+  
+
+                </div>
+
             </div>
 
+        </div>
+
+
+        <div class="store-product-view-calculator-button">
+            <img src="{% static 'assets/guest-cart-green-check.svg' %}" alt="">
+            <h6 class="poppins-semibold"> mga pinili ko </h6>
         </div>
 
     </div> {% endcomment %}
 
-    <!-- View Store Facebook Account
-    <div class="store-facebook-container">
-        <div class="store-facebook-wrapper">
-            
-            <div class="term-conditions-buttons"> 
-                <div class="term-conditions-button">
-                    <span class="poppins-light">Nabasa ko na ito</span>
+    <!-- View Store Facebook Account-->
+    {% comment %} <div class="store-facebook-container">
+        <div class="store-facebook-wrapper"> 
+
+            <div class="store-facebook-buttons"> 
+                <div class="store-facebook-button">
+                    <span class="poppins-regular">Nabasa ko na ito</span>
                     <img src="{% static 'assets/back-down-icon.svg' %}" alt=""> 
                 </div> 
             </div>
 
+            <div class="store-facebook-icon">
+                <img src="{% static 'assets/guest-facebook-pop-up.svg' %}" alt="">
+            </div>
+
+            <div class="store-facebook-data-container">
+                <h5 class="poppins-medium">Pangalan</h5>
+                <div class="store-facebook-data-input-container">
+                    <input type="text" class="poppins-regular" readonly placeholder="Pangalan ng tindahan sa facebook" value="Ericson Mark">
+                    <div class="store-copy-container">
+                        <img src="{% static 'assets/guest-copy-fb.svg' %}" alt="">
+                        <span class="poppins-medium">copy</span>
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="store-facebook-data-container">
+                <h5 class="poppins-medium">Link</h5>
+                <div class="store-facebook-data-input-container">
+                    <input type="text" class="poppins-regular" readonly placeholder="Pangalan ng tindahan sa facebook" value="https://www.facebook.com/makietech.guanzon/">
+                    <div class="store-copy-container">
+                        <img src="{% static 'assets/guest-copy-fb.svg' %}" alt="">
+                        <span class="poppins-medium">copy</span>
+
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="store-facebook-visit-button">
+                <a href="">
+                    <span class="poppins-medium">Bisitahin</span>
+                    <img src="{% static 'assets/guest-store-human-visit.svg' %}" alt="">
+                </a>
+            </div>
+
 
         </div>
-    </div>-->
+    </div> {% endcomment %}
 
+
+    <!-- Store Product Calculator -->
+    {% comment %} <div class="store-section-list-container animate-in">
+        
+        <div class="store-calculator-container">
+
+            <div class="store-calculator-warning-container">
+                <img src="{% static 'assets/guest-calculator-warning.svg' %}" alt="">
+                <h5 class="poppins-regular">Ang mga presyong ipinapakita ay batay sa impormasyong ibinigay ng merchant at para sa sanggunian lamang. Maaaring magbago ang aktwal na presyo at availability ng produkto. Mangyaring makipag-ugnayan muna sa merchant bago gumawa ng anumang desisyon.</h5>
+                <h6 class="poppins-extralight-italic">Hindi ito isang sistema ng pagbabayad o pag-order—ang mga kalkulasyon ay para lamang sa pagtatantya.</h6>
+            </div>
+            <div class="store-calculator-form-container">
+                <h3 class="poppins-extrabold">Kasalukuyang Pera</h3>
+                <div class="store-calculator-form-input">
+                    <span class="poppins-semibold">PHP</span>
+                    <input type="number" name="" id="" placeholder="example: 12000" class="poppins-regular">
+                </div>
+                <h4 class="poppins-semibold">-15,000</h4>
+                <span class="store-calculator-form-dvider"></span> 
+                <h2 class="poppins-semibold">-15,000</h2>
+
+                <button class="store-calculator-download">
+                    <span class="poppins-semibold">I-save sa PDF ang Paninda at Impormasyon ng mga napili</span>
+                    <img src="{% static 'assets/guest-pdf-button.svg' %}" alt="">
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="store-section-header">
+            <div class="store-section-header-title">
+                <img src="{% static 'assets/guest-calculator-selected-cart.svg' %}" alt="">
+                <h3 class="poppins-semibold ellipsis">Ang mga napili ko</h3>
+
+            </div>
+
+            <div class="store-section-header-button" >
+                <span class="poppins-light ellipsis">Close Calculator</span>
+                <img src="{% static 'assets/guest-calculator-close-arrow.svg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="store-section-divider">
+            <span></span>
+        </div>
+ 
+        <div class="store-product-view-calculator-button">
+            <img src="{% static 'assets/guest-cart-red-close.svg' %}" alt="">
+            <h6 class="poppins-semibold"> isira ito </h6>
+        </div>
+
+        <div class="store-calculator-selected-container scrollable-div"> 
+            <div class="store-calculator-selected-wrapper">
+
+
+                <!-- Selected Product In Calculator Screen-->
+                <div class="store-calculator-selected">
+                    
+                    <button class="store-calculator-remove-selected">
+                        <img src="{% static 'assets/guest-calculator-remove.svg' %}" alt="">
+                    </button>
+                    
+                    <div class="store-calculator-selected-image">
+                        <img src="{% static 'assets/guest-calculator-empty-product-image.svg' %}" alt="" class="store-calculator-selected-image-svg">
+                        <span class="poppins-light">Available sa Gabi</span>
+                    </div>
+
+                    <div class="store-calculator-selected-info">
+                        <h4 class="poppins-semibold ellipsis">Guanzon Store</h4>
+                        <h5 class="poppins-regular ellipsis">Hamburger ni manong kano fdsfdfds af sdfsdf </h5>
+                        <div class="store-calculator-selected-calculation">
+                            <span class="store-calculator-selected-calculation-php poppins-black">PHP</span>
+                            <span class="store-calculator-selected-calculation-price poppins-regular">15</span>
+                            <img src="{% static 'assets/guest-calculation-multiply.svg' %}" alt="">
+                            <span class="store-calculator-selected-calculation-price poppins-regular">1</span>
+                            <span class="store-calculator-selected-calculation-price poppins-regular-italic">pieces</span>
+                        </div>
+                        <span class="store-calculator-selected-divider"></span>
+                        <div class="store-calculator-selected-calculation">
+                            <img src="{% static 'assets/guest-calculation-hand.svg' %}" alt=""> 
+                            <span class="store-calculator-selected-calculation-price poppins-bold">P 12,000</span>
+                        </div>
+                        
+                    </div>
+
+                    <div class="store-calculator-selected-actions">
+                        <button>
+                            <img src="{% static 'assets/guest-quantity-add.svg' %}" alt="">
+                        </button>
+                        <input type="number" name="" id="" value="1" class="poppins-regular">
+                        <button>
+                            <img src="{% static 'assets/guest-quantity-minus.svg' %}" alt="">
+                        </button>
+                    </div>
+
+                    <button class="store-calculator-visit-button">
+                        <span class="poppins-bold">bisitahin</span>
+                        <img src="{% static 'assets/guest-visit-button-store.svg' %}" alt="">
+                    </button> 
+                    
+                </div>
+
+
+
+
+
+
+
+            </div> 
+        </div>
+
+    </div> {% endcomment %}
 
 {% endblock bodyblock %}
     
