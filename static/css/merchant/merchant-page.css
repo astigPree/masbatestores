@@ -136,7 +136,6 @@ body {
 }
 
 .shop-offer-wrapper h2{
-  text-align: center;
   font-size: 10px;
   color: #CCAFA0;
   display: flex;
@@ -147,68 +146,6 @@ body {
   margin-bottom: 2em;
 }
 
-.product-services-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  width: 90%;
+.store-product-container {
   margin: 0 auto;
-  place-items: center;
-  gap: 1em;
-}
-
-/* grid items */
-.offer-wrapper {
-  width: 100%;
-  max-width: 160px; /* adjust later on for pc */
-  background-color: #916E5C;
-  border-radius: 4px;
-}
-
-.offer-img {
-  display: block;
-  margin: 0.5em auto;
-}
-
-/* pagkaon / serbisyo */
-.offer-type {
-  width: 50%;
-  margin-left: auto;
-  background-color: #CCAFA0;
-  color: #644839;
-  font-size: 6px;
-  padding: 4px;
-  border-radius: 0 4px;
-
-  display: flex;
-  
-  gap: 1em;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.offer-avail {
-  width: 60%;
-  font-size: 6px;
-  background-color: #3D1A07;
-  color: #CCAFA0;
-  border-radius: 0 4px 0 0;
-  padding: 4px 0;
-  padding-left: 4px;
-}
-
-/* name / price */
-.offer-item {
-  width: 100%;  
-  overflow: hidden;
-  font-size: 8px;
-  background-color: #CCAFA0;
-  color: #3D1A07;
-  padding: 0.5em;
-  border-radius: 0 0 4px 4px;
-}
-
-.offer-item p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
