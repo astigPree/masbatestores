@@ -1,6 +1,12 @@
 body {
   background-color: #644839;
 }
+
+.main-wrapper {
+  max-width: 425px;
+  margin: 0 auto;
+}
+
 /* header title */
 .header-title {
   color: #CCAFA0;

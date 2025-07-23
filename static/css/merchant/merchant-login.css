@@ -2,6 +2,11 @@ body {
   background-color: #644839;
 }
 
+.main-wrapper {
+  max-width: 425px;
+  margin: 0 auto;
+}
+
 .login-wrapper {
   display: flex;
   flex-direction: column;

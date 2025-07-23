@@ -1,18 +1,18 @@
+{% extends "base.html" %}
 {% load static %}
 
 {% block headblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="{% static 'css/merchant/merchant-page.css' %}">
     <link rel="stylesheet" href="{% static 'css/guest/home.css' %}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
-    <script src="{% static 'js/guest/addition_dom.js' %}" defer></script>
-    <script src="{% static 'js/guest/home.js' %}" defer></script>
+    <script src="{% static 'js/merchant/merchant.js' %}" defer></script>
+
 {% endblock headblock %}
 
 {% block bodyblock %}
+<div class="main-wrapper">
   <div class="header-title">
     <img src="{% static 'assets/guest-store-human-empty.svg' %}" alt="Guest Store"> 
     <p class="poppins-semibold">Masbatestores</p>
@@ -48,7 +48,7 @@
       </svg>
       Ayusin ang Produkto at Serbisyo
     </button>
-    <button class="profile-shop-btn">
+    <button class="profile-shop-btn" id="view_review">
       <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M11.9 1.44444H0.7V0H11.9V1.44444ZM7.7 8.76055L5.6 10.9272V11.5556H0.7V7.22222H0V5.77778L0.7 2.16667H11.9L12.327 4.38389C12.012 4.45611 11.711 4.62222 11.473 4.86778L9.191 7.22222H7.7V8.76055ZM6.3 7.22222H2.1V10.1111H6.3V7.22222ZM13.895 6.83944L12.971 5.88611C12.831 5.74167 12.6 5.74167 12.467 5.88611L11.781 6.59389L13.209 8.06722L13.895 7.35944C14.035 7.22222 14.035 6.98389 13.895 6.83944ZM7 11.5267V13H8.428L12.719 8.58L11.291 7.09944L7 11.5267Z" 
         fill="currentColor"/>
@@ -108,5 +108,6 @@
       </div><!--store product-->
     </div><!--store product container-->
   </div><!--shop-offer-wrapper-->
+</div><!--main-wrapper-->
 {% endblock bodyblock %}
     
