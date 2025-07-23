@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+{% block headblock %} 
+    <link rel="stylesheet" href="{% static 'css/users/user-login.css' %}">
+{% endblock headblock %}
+
+
+
+
+{% block bodyblock %}
+
+    <div class="user-login-container">
+
+        <div class="user-login-wrapper">
+
+            <img src="{% static 'assets/form-masbatestore-logo.svg' %}" alt="" class="masbatestores-logo">
+            <h1 class="poppins-semibold masbatestores-logo-name">Masbatestores</h1>
+            <p class="masbatestore-form-descriptions poppins-regular">
+                Mag-log in para makabili ng paninda, tingnan ang orders mo, at makatanggap ng updates mula sa mga tindahan.
+            </p>
+
+            <div class="masbatestore-form-title-container">
+                <img src="{% static 'assets/form-product-category.svg' %}" alt="">
+                <h4 class="poppins-semibold">Pumasok sa inyung Account</h4>
+                <img src="{% static 'assets/form-service-category.svg' %}" alt="">
+            </div>
+
+            <form action="" class="login-form">
+                <label for="username" class="poppins-bold">Username</label>
+                <input type="text" name="username" class="poppins-regular" placeholder="Example; ericsonGuanzon123">
+                <label for="password" class="poppins-bold">Password</label>
+                <input type="password" name="password" class="poppins-regular" placeholder="Example; ericsonGuanzon123">
+            </form>
+
+            <div class="form-action-container">
+                <button class="form-action-1">
+                    <img src="{% static 'assets/form-left-arrow.svg' %}" alt="">
+                    <span class="poppins-light-italic">Nakalimutan ang Password?</span>
+                </button>
+
+                <button class="form-action-2">
+                    <span class="poppins-semibold">Mag-Log In (Costumer)</span>
+                    <img src="{% static 'assets/form-right-arrow.svg' %}" alt="">
+                </button>
+            </div>
+
+            <div class="form-divider"></div>
+
+            <div class="masbatestore-footer-form-container">
+                <img src="{% static 'assets/form-storyset-store.svg' %}" alt="">
+                <div class="masbatestore-footer-descriptions">
+                    <p class="poppins-regular">
+                        Magsimula sa pagrehistro—makatuklas ng mga tindahang malapit, mag-save ng paninda, at mag-order nang madali.
+                    </p>
+                    <button>
+                        <span class="poppins-regular">Gumawa ng Costumer Account</span>
+                        <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+{% endblock bodyblock %}
+
+
+

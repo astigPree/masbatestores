@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+{% block headblock %} 
+    <link rel="stylesheet" href="{% static 'css/users/user-register.css' %}">
+{% endblock headblock %}
+
+
+
+
+{% block bodyblock %}
+
+    <div class="user-register-container">
+
+        <div class="user-register-wrapper">
+
+
+
+           <!-- Store Store Header -->
+            <div class="store-header">
+                <img src="{% static 'assets/guest-store-human-review-store.svg' %}" alt="">
+                <h1 class="poppins-semibold">Masbatestores</h1> 
+            </div>
+
+            <div class="masbatestore-footer-form-container">
+                <img src="{% static 'assets/form-storyset-store.svg' %}" alt="">
+                <div class="masbatestore-footer-descriptions">
+                    <p class="poppins-regular">
+                        Magsimula sa pagrehistro—makatuklas ng mga tindahang malapit, mag-save ng paninda, at mag-order nang madali.
+                    </p> 
+                </div>
+            </div>
+
+            <div class="form-container">
+                <h3 class="poppins-bold">Magrehistro Bilang User</h3> 
+                <div class="profile-display-container">
+                    <img src="{% static 'assets/user-upload-icon.svg' %}" alt="">
+                </div>
+                <h4 class="poppins-regular">Larawan ng Profile</h4>
+
+                <div class="form-input-container">
+                    <label for="username" class="poppins-regular">Username</label>
+                    <input type="text" name="username" class="poppins-light" placeholder="Hal. Guanzon@123">
+                </div>
+
+                <div class="form-input-container">
+                    <label for="email" class="poppins-regular">Email Address</label>
+                    <input type="text" name="email" class="poppins-light" placeholder="Hal. juana@example.com">
+                </div>
+
+                <div class="form-input-container">
+                    <label for="password" class="poppins-regular">Password</label>
+                    <input type="password" name="password" class="poppins-light" placeholder="Gumawa ng malakas na password">
+                </div>
+
+                <div class="form-input-container">
+                    <label for="retype-password" class="poppins-regular">I-confirm ang Password</label>
+                    <input type="password" name="retype-password" class="poppins-light" placeholder="I-type muli ang iyong password">
+                </div>
+
+                <div class="form-note-header">
+                    <h3 class="poppins-semibold">Listahan ng Produktong/Serbisyong Hinahanap</h3>
+                    <h5 class="poppins-light">(Kailangan ng Hindi Bababa sa 1)</h5>
+                </div>
+
+                <div class="form-container-divider-1"></div>
+ 
+                <div class="form-input-container form-input-container-center">
+                    <label for="retype-password" class="poppins-regular">Ano ang gusto mong hanapin?</label>
+                    <input type="password" name="retype-password" class="poppins-light" placeholder="Hal. gulay o serbisyo sa pag-aayos">
+                </div>
+
+                <button class="add-note-button">
+                    <span class="poppins-semibold">Idagdag Ito</span>
+                    <img src="{% static 'assets/user-form-add-icon.svg' %}" alt="">
+                </button>
+
+                <div class="note-list-container">
+                    <ol>
+                        <li class="poppins-regular">Walang laman ang listahan</li>
+                    </ol>
+                </div>
+
+                <div class="form-container-divider-2"></div>
+                
+                <div class="term-and-conditions-opener">
+                    <input type="checkbox" name="accept-term" id="">
+                    <a class="poppins-regular">
+                        Sumasang-ayon ako sa mga <span class="poppins-light-italic">Tuntunin ng Serbisyo</span> at <span class="poppins-light-italic">Patakaran sa Privacy</span> ng app.
+                    </a>
+                </div>
+
+                <p class="form-container-footer poppins-light-italic">
+                    Ang pagrehistro bilang user ay nangangahulugang pagsang-ayon sa aming mga patakaran. Gamitin ang app nang responsable at makipag-ugnayan sa mga tindahan nang may respeto.
+                </p>
+
+                <div class="submit-button-container">
+                    <button>
+                        <span class="poppins-semibold">Gamitin ang App!</span>
+                        <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+                    </button>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+{% endblock bodyblock %}

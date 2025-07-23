@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+
+{% block headblock %} 
+    <link rel="stylesheet" href="{% static 'css/users/user-settings-update-username.css' %}">
+{% endblock headblock %}
+
+{% block bodyblock %}
+
+    <div class="user-settings-container">
+
+        <div class="user-settings-wrapper">
+
+             
+            <div class="store-header">
+                <img src="{% static 'assets/guest-store-human-review-store.svg' %}" alt="">
+                <h1 class="poppins-semibold">Masbatestores</h1>
+                <div class="store-close-button">
+                    <span class="poppins-medium">I-close Ito</span>
+                    <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+                </div>
+            </div>
+
+            <div class="masbatestore-footer-form-container">
+                <img src="{% static 'assets/form-storyset-store.svg' %}" alt="">
+                <div class="masbatestore-footer-descriptions">
+                    <p class="poppins-regular">
+                        Baguhin ang iyong pangunahing impormasyon upang mapanatiling tama at personal ang iyong account.
+                    </p> 
+                </div>
+            </div>
+            <div class="form-container">
+                <h3 class="poppins-bold">I-update ang Impormasyon ng Account</h3> 
+                <div class="profile-display-container">
+                    <img src="{% static 'assets/user-upload-icon.svg' %}" alt="">
+                </div>
+                <h4 class="poppins-regular">Larawan ng Profile</h4>
+
+                <div class="form-input-container">
+                    <label for="email" class="poppins-regular">Email Address</label>
+                    <input type="text" name="email" class="poppins-light" placeholder="Hal. juana@example.com">
+                </div>
+                <div class="submit-button-container">
+                    <button>
+                        <span class="poppins-semibold">I-save ang Mga Pagbabago</span>
+                        <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+                    </button>
+                </div>
+
+            </div>
+
+
+        </div>
+    
+    </div>
+
+{% endblock bodyblock %}

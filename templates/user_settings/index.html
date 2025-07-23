@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+
+{% block headblock %} 
+    <link rel="stylesheet" href="{% static 'css/users/user-settings.css' %}">
+{% endblock headblock %}
+
+{% block bodyblock %}
+
+    <div class="user-settings-container">
+
+        <div class="user-settings-wrapper">
+    
+
+ 
+            <div class="store-header">
+                <img src="{% static 'assets/guest-store-human-review-store.svg' %}" alt="">
+                <h1 class="poppins-semibold">Masbatestores</h1>
+                <div class="store-close-button">
+                    <span class="poppins-medium">I-close Ito</span>
+                    <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+                </div>
+            </div>
+
+            <img src="{% static 'assets/user-settings-icon.svg' %}" alt="" class="user-settings-icon">
+            <h4 class="user-settings-title poppins-bold">Settings ng Account</h4>
+
+            <p class="user-settings-bio poppins-light-italic">
+                Ayusin at i-personalize ang iyong tindahan—mula sa impormasyon hanggang seguridad—lahat nandito.
+            </p>
+
+            <div class="user-settings-title-action">
+                <img src="{% static 'assets/user-settings-profile.svg' %}" alt="">
+                <h2 class="poppins-semibold"> Impormasyon ng Account</h2>
+            </div>
+
+            <div class="user-settings-divider"></div>
+            <div class="user-settings-action">
+                <h5 class="poppins-medium">I-update ang Impormasyon ng Account</h5>
+                <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+            </div>
+
+
+            <div class="user-settings-title-action">
+                <img src="{% static 'assets/user-settings-security.svg' %}" alt="">
+                <h2 class="poppins-semibold"> Seguridad ng Account</h2>
+            </div>
+
+            <div class="user-settings-divider"></div>
+            <div class="user-settings-action">
+                <h5 class="poppins-medium">Palitan ang Username at Password</h5>
+                <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+            </div>
+            <div class="user-settings-action">
+                <h5 class="poppins-medium">Magdagdag ng Karagdagang Seguridad</h5>
+                <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+            </div>
+
+
+            <div class="user-settings-title-action">
+                <img src="{% static 'assets/user-settings-legal.svg' %}" alt="">
+                <h2 class="poppins-semibold">Legal na Impormasyon</h2>
+            </div>
+
+            <div class="user-settings-divider"></div>
+            <div class="user-settings-action">
+                <h5 class="poppins-medium">Tuntunin at Kondisyon</h5>
+                <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+            </div>
+ 
+
+            <div class="user-settings-title-action">
+                <img src="{% static 'assets/user-settings-logout.svg' %}" alt="">
+                <h2 class="poppins-semibold">Mag-logout</h2>
+            </div>
+
+            <div class="user-settings-divider"></div>
+            <div class="user-settings-action">
+                <h5 class="poppins-medium">Oo, Mag-logout Ako</h5>
+                <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+            </div>
+
+
+        </div>
+    
+    </div>
+
+{% endblock bodyblock %}

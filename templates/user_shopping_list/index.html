@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+
+{% block headblock %} 
+    <link rel="stylesheet" href="{% static 'css/users/user-shopping-list.css' %}">
+{% endblock headblock %}
+
+{% block bodyblock %}
+
+    <div class="user-profile-container">
+
+        <div class="user-profile-wrapper">
+           <!-- Store Store Header --> 
+            <div class="store-header">
+                <img src="{% static 'assets/guest-store-human-review-store.svg' %}" alt="">
+                <h1 class="poppins-semibold">Masbatestores</h1>
+                <div class="store-close-button">
+                    <span class="poppins-medium">I-close Ito</span>
+                    <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+                </div>
+            </div>
+
+            <div class="user-shopping-lists-header">
+                <h3 class="poppins-medium">Mga listahan ng mga bibilhin ko</h3>
+                <h6 class="poppins-extrabold">12 bilihin</h6>
+            </div>
+            <div class="user-shopping-lists-divider-1"></div>
+
+            <div class="user-shopping-lists-actions-bar">
+                <h3 class="poppins-regular">Pangalan ng bibilhin</h3>
+                <div class="user-shopping-list-actions-bar-inputs">
+                    <input type="text" name="shopping" id="" class="poppins-light" placeholder="Hal. Babanaque">
+                    <button>
+                        <span class="poppins-semibold">Idagdag Ito</span>
+                        <img src="{% static 'assets/shopping-list-add.svg' %}" alt="">
+                    </button>
+                </div>
+
+                <div class="user-shopping-list-bottom-actions">
+                    <button class="bottom-action">
+                        <img src="{% static 'assets/shopping-list-mignify-glass.svg' %}" alt="">
+                        <span class="poppins-semibold">Hanapin lahat na bilihin</span>
+                    </button>
+                    <button class="bottom-action">
+                        <img src="{% static 'assets/shopping-list-pdf.svg' %}" alt="">
+                        <span class="poppins-semibold">Isave ang listahan</span>
+                    </button>
+                    <select name="" id="" class="bottom-select poppins-medium">
+                        <option value="1" class="poppins-regular">Pinakamalapit sa akin</option>
+                        <option value="2" class="poppins-regular">Pinaka mura</option>
+                        <option value="3" class="poppins-regular">Maraming Reviews</option>
+                    </select>
+                </div>
+            </div>
+            
+
+            
+            <!-- Fav Stores Empty -->
+            {% comment %} <div class="user-shopping-lists-empty">
+                <img src="{% static 'assets/guest-store-human-empty.svg' %}" alt="">
+                <h3 class="poppins-medium">Wala ka pang nakalistang bibilhin.</h3>
+                <h5 class="poppins-light">Magdagdag ng mga paninda para hindi mo makalimutan!</h5> 
+            </div>  {% endcomment %}
+
+            <div class="user-shopping-lists-divider-2"></div>
+
+            <div class="shopping-content-container">
+                <div class="shopping-content-title">
+                    <h3 class="poppins-extrabold ellipsis">BananaQue</h3>
+                    <button class="shopping-content-title-button">
+                        <span class="poppins-medium">Alisin sa listahan</span>
+                        <img src="{% static 'assets/shopping-list-x.svg' %}" alt="">
+                    </button>
+                    <button class="shopping-content-title-button">
+                        <span class="poppins-medium">Hanapin Ito</span>
+                        <img src="{% static 'assets/shopping-list-find.svg' %}" alt="">
+                    </button>
+                </div>
+
+                <div class="shopping-content-store-info-container">
+                    <div class="shopping-content-store-info">
+                        <h4 class="poppins-semibold">Guanzon Store</h4>
+                        <h6 class="poppins-regular">Barangay Ibingay Boulevard Masbate City</h6>
+                    </div>
+                    <button class="shopping-content-store-visit-button">
+                        <span class="poppins-regular">Bisitahin nag tindahan</span>
+                        <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+                    </button>
+                </div>
+
+                <div class="shopping-content-store-items-container scrollable-div">
+                    <div class="shopping-content-store-items-wrapper">
+
+                        <div class="store-product">
+
+                            <div class="store-product-image">
+                                <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="" class="store-product-image-svg" >
+                            </div>
+                            
+                            <div class="store-product-category">
+                                <span class="poppins-light">Produkto</span>
+                                <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="">
+                            </div>
+                                
+                            <div class="store-product-available">
+                                <span class="poppins-light">Available sa Gabi</span>
+                            </div>
+                            <div class="store-product-info-container">
+                                <h5 class="poppins-regular ellipsis"> Hamburger Ni Titas sa kanto</h5>
+                                <h4 class="poppins-bold ellipsis">P 1,500.00</h4>
+                            </div>
+
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="user-shopping-lists-divider-2"></div>
+
+
+
+        </div>
+    
+    </div>
+
+{% endblock bodyblock %}

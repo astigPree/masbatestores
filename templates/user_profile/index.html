@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+
+{% block headblock %} 
+    <link rel="stylesheet" href="{% static 'css/users/user-profile.css' %}">
+{% endblock headblock %}
+
+{% block bodyblock %}
+
+    <div class="user-profile-container">
+
+        <div class="user-profile-wrapper">
+
+            
+           <!-- Store Store Header -->
+            <div class="store-header">
+                <img src="{% static 'assets/guest-store-human-review-store.svg' %}" alt="">
+                <h1 class="poppins-semibold">Masbatestores</h1> 
+            </div> 
+
+
+            <img src="{% static 'assets/guest-user-account.svg' %}" alt="" class="account-profile-holder">
+            <h3 class="account-profile-name poppins-bold">@EricsonMakrs</h3>
+            <h6 class="poppins-medium account-profile-email">techmakie@gmail.com</h6>
+
+            <div class="account-statics-container">
+                <div class="static-left">
+                    <h2 class="poppins-extrabold">100</h2>
+                    <h6 class="poppins-light">paninda na gusto</h6>
+                </div>
+                <div class="static-center">
+                    <h2 class="poppins-extrabold">100</h2>
+                    <h6 class="poppins-light">Paborito na tindahan</h6>
+                </div>
+                <div class="static-right">
+                    <h2 class="poppins-extrabold">100</h2>
+                    <h6 class="poppins-light">nabisitang tindahan</h6>
+                </div> 
+            </div>
+
+            <div class="actions-button">
+                <button class="action-button">
+                    <img src="{% static 'assets/user-profile-basket.svg' %}" alt="">
+                    <span class="poppins-light">mga paninda na nagustuhan sa mga tindahan</span>
+                </button>
+                <button class="action-button">
+                    <img src="{% static 'assets/user-profile-store.svg' %}" alt="">
+                    <span class="poppins-light">mga tindahan na nagustuhan ko</span>
+                    
+                </button>
+            </div>
+
+            <div class="actions-button">
+                <button class="action-button">
+                    <img src="{% static 'assets/user-profile-note.svg' %}" alt="">
+                    <span class="poppins-light">mga listahan ng mga bibilhin ko</span>
+                </button>
+                <button class="action-button">
+                    <img src="{% static 'assets/user-profile-settings.svg' %}" alt="">
+                    <span class="poppins-light">tingnan ang account settings</span>
+                    
+                </button>
+            </div>
+
+            <div class="actions-button">
+                <button class="action-button">
+                    <img src="{% static 'assets/user-profile-location.svg' %}" alt="">
+                    <span class="poppins-light">hanapin ang tindahan na malapit sa akin</span>
+                </button> 
+            </div>
+
+
+            <div class="recommended-form-container">
+                <div class="recommended-form-title">
+                    <img src="{% static 'assets/user-recommended-icon.svg' %}" alt="">
+                    <h2 class="poppins-bold">Inirerekomenda Para sa Iyo</h2>
+                </div>
+
+                <!-- Empty Recommendation Display -->
+                {% comment %} <div class="recommended-empty">
+                    <img src="{% static 'assets/guest-store-human.svg' %}" alt="">
+                    <h4 class="poppins-medium">Wala pa kaming inirerekomendang paninda para sa iyo.</h4>
+                    <h6 class="poppins-light">Subukang mag-save ng paninda o mag-set ng lokasyon para makakita ng mga rekomendasyon!</h6>
+                </div> {% endcomment %}
+
+                <!-- List Of Recommendation Display -->
+                <div class="recommended-list-container">
+                    <div class="recommended-list-store">
+                        <div class="recommended-list-store-name">
+                            <img src="{% static 'assets/guest-store-human.svg' %}" alt="">
+                            <h4 class="ellipsis poppins-semibold ">Guanzon Stores</h4> 
+                        </div>
+                        <button>
+                            <span class="poppins-medium">Bisitahin ang tindahan</span>
+                            <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+                        </button>
+                    </div>
+
+                    <div class="recommended-list-products scrollable-div">
+                        <div class="recommended-list-product-wrapper">
+                            <div class="store-product">
+
+                                <div class="store-product-image">
+                                    <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="" class="store-product-image-svg" >
+                                </div>
+                                
+                                <div class="store-product-category">
+                                    <span class="poppins-light">Produkto</span>
+                                    <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="">
+                                </div>
+                                 
+                                <div class="store-product-available">
+                                    <span class="poppins-light">Available sa Gabi</span>
+                                </div>
+                                <div class="store-product-info-container">
+                                    <h5 class="poppins-regular ellipsis"> Hamburger Ni Titas sa kanto</h5>
+                                    <h4 class="poppins-bold ellipsis">P 1,500.00</h4>
+                                </div>
+
+                            </div>
+
+
+
+                        </div> 
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+    
+    </div>
+
+{% endblock bodyblock %}

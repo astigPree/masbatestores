@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+
+{% block headblock %} 
+    <link rel="stylesheet" href="{% static 'css/users/user-calculator.css' %}">
+{% endblock headblock %}
+
+{% block bodyblock %}
+
+    <div class="user-profile-container">
+
+        <div class="user-profile-wrapper">
+           <!-- Store Store Header --> 
+            <div class="store-header">
+                <img src="{% static 'assets/guest-store-human-review-store.svg' %}" alt="">
+                <h1 class="poppins-semibold">Masbatestores</h1>
+                <div class="store-close-button">
+                    <span class="poppins-medium">I-close Ito</span>
+                    <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+                </div>
+            </div>
+
+            <div class="user-calculator-header">
+                <h3 class="poppins-medium">Paborito Kong Paninda</h3>
+                <h6 class="poppins-extrabold">12 stores & 20 paninda</h6>
+            </div>
+            <div class="user-calculator-divider-1"></div>
+
+
+            <div class="store-calculator-container">
+
+                <div class="store-calculator-warning-container">
+                    <img src="{% static 'assets/guest-calculator-warning.svg' %}" alt="">
+                    <h5 class="poppins-regular">Ang mga presyong ipinapakita ay batay sa impormasyong ibinigay ng merchant at para sa sanggunian lamang. Maaaring magbago ang aktwal na presyo at availability ng produkto. Mangyaring makipag-ugnayan muna sa merchant bago gumawa ng anumang desisyon.</h5>
+                    <h6 class="poppins-extralight-italic">Hindi ito isang sistema ng pagbabayad o pag-order—ang mga kalkulasyon ay para lamang sa pagtatantya.</h6>
+                </div>
+                <div class="store-calculator-form-container">
+                    <h3 class="poppins-extrabold">Kasalukuyang Pera</h3>
+                    <div class="store-calculator-form-input">
+                        <span class="poppins-semibold">PHP</span>
+                        <input type="number" name="" id="" placeholder="example: 12000" class="poppins-regular">
+                    </div>
+                    <h4 class="poppins-semibold">-15,000</h4>
+                    <span class="store-calculator-form-dvider"></span> 
+                    <h2 class="poppins-semibold">-15,000</h2>
+
+                    <button class="store-calculator-download">
+                        <span class="poppins-semibold">I-save sa PDF ang Paninda at Impormasyon ng mga napili</span>
+                        <img src="{% static 'assets/guest-pdf-button.svg' %}" alt="">
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="store-section-header">
+                <div class="store-section-header-title">
+                    <img src="{% static 'assets/guest-calculator-selected-cart.svg' %}" alt="">
+                    <h3 class="poppins-semibold ellipsis">Mga Napiling Produkto / Serbisyo</h3> 
+                </div> 
+            </div>
+
+            
+            <div class="store-section-divider">
+                <span></span>
+            </div>
+
+            {% comment %} <div class="store-selection-container">
+                <div class="store-selection-info">
+                    <div class="store-selection-info-enable">
+                        <input type="checkbox" name="" id="">
+                        <h3 class="poppins-bold">Guanzon Store</h3>
+                    </div>
+                </div>
+
+                <div class="store-calculator-selected-wrapper"> 
+                    <!-- Selected Product In Calculator Screen-->
+                    <div class="store-calculator-selected">
+                        
+                        <button class="store-calculator-remove-selected">
+                            <img src="{% static 'assets/guest-calculator-remove.svg' %}" alt="">
+                        </button>
+                        
+                        <div class="store-calculator-selected-image">
+                            <img src="{% static 'assets/guest-calculator-empty-product-image.svg' %}" alt="" class="store-calculator-selected-image-svg">
+                            <span class="poppins-light">Available sa Gabi</span>
+                        </div>
+
+                        <div class="store-calculator-selected-info">
+                            <h4 class="poppins-semibold ellipsis">Guanzon Store</h4>
+                            <h5 class="poppins-regular ellipsis">Hamburger ni manong kano fdsfdfds af sdfsdf </h5>
+                            <div class="store-calculator-selected-calculation">
+                                <span class="store-calculator-selected-calculation-php poppins-black">PHP</span>
+                                <span class="store-calculator-selected-calculation-price poppins-regular">15</span>
+                                <img src="{% static 'assets/guest-calculation-multiply.svg' %}" alt="">
+                                <span class="store-calculator-selected-calculation-price poppins-regular">1</span>
+                                <span class="store-calculator-selected-calculation-price poppins-regular-italic">pieces</span>
+                            </div>
+                            <span class="store-calculator-selected-divider"></span>
+                            <div class="store-calculator-selected-calculation">
+                                <img src="{% static 'assets/guest-calculation-hand.svg' %}" alt=""> 
+                                <span class="store-calculator-selected-calculation-price poppins-bold">P 12,000</span>
+                            </div>
+                            
+                        </div>
+
+                        <div class="store-calculator-selected-actions">
+                            <button>
+                                <img src="{% static 'assets/guest-quantity-add.svg' %}" alt="">
+                            </button>
+                            <input type="number" name="" id="" value="1" class="poppins-regular">
+                            <button>
+                                <img src="{% static 'assets/guest-quantity-minus.svg' %}" alt="">
+                            </button>
+                        </div>
+ 
+                        
+                    </div>
+ 
+                </div> 
+            </div> {% endcomment %}
+
+            <div class="user-calculator-empty">
+                <img src="{% static 'assets/guest-store-human-empty.svg' %}" alt="">
+                <h3 class="poppins-medium">Wala ka pang nai-save na paninda.</h3>
+                <h5 class="poppins-light">Mag-save ng mga gusto mong bilhin para madaling balikan!</h5>
+                <button>
+                    <span class="poppins-light">Maghanap ng Paninda</span>
+                    <img src="{% static 'assets/form-right-arrow.svg' %}" alt="">
+                </button>
+            </div>
+
+
+
+        </div>
+    
+    </div>
+
+{% endblock bodyblock %}

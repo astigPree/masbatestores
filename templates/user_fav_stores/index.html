@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+
+{% block headblock %} 
+    <link rel="stylesheet" href="{% static 'css/users/user-fav-stores.css' %}">
+{% endblock headblock %}
+
+{% block bodyblock %}
+
+    <div class="user-profile-container">
+
+        <div class="user-profile-wrapper">
+
+           <!-- Store Store Header --> 
+            <div class="store-header">
+                <img src="{% static 'assets/guest-store-human-review-store.svg' %}" alt="">
+                <h1 class="poppins-semibold">Masbatestores</h1>
+                <div class="store-close-button">
+                    <span class="poppins-medium">I-close Ito</span>
+                    <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+                </div>
+            </div>
+
+            <div class="user-fav-stores-header">
+                <h3 class="poppins-medium">Mga paboritong tindahan</h3>
+                <h6 class="poppins-extrabold">0 Store</h6>
+            </div>
+            <div class="user-fav-stores-divider-1"></div>
+
+            <!-- Fav Stores Empty -->
+            {% comment %} <div class="user-fav-stores-empty">
+                <img src="{% static 'assets/guest-store-human-empty.svg' %}" alt="">
+                <h3 class="poppins-medium">Wala ka pang nai-save na tindahan.</h3>
+                <h5 class="poppins-light">Mag-save ng mga paborito mong tindahan para madaling balikan!</h5>
+                <button>
+                    <span class="poppins-light">Maghanap ng Tindahan</span>
+                    <img src="{% static 'assets/form-right-arrow.svg' %}" alt="">
+                </button>
+            </div> {% endcomment %}
+
+            <!-- Fav Stores List -->
+            <div class="user-fav-stores-container">
+                 
+
+                <!-- Store Background Image -->
+                <div class="store-background-image-container">
+                    <img src="" alt="">
+                    <div class="store-reviews-container">
+                        <span class="poppins-semibold">100k Reviews</span>
+                        <img src="{% static 'assets/guest-reviews-icon.svg' %}" alt="">
+                    </div>
+                    <button class="store-fav-button">
+                        <span class="poppins-bold">Paborito Ko Ito</span>
+                        <img src="{% static 'assets/store-liked-icon.svg' %}" alt="">
+                    </button>
+                </div>
+
+                <!-- Store Profile Data -->
+                <div class="store-profile-data-container">
+                    <div class="store-profile-image-container">
+                        <img src="{% static 'assets/guest-store-human.svg' %}" class="store-image-profile-svg" alt="">
+                        <img src="{% static 'assets/guest-green-store.svg' %}" class="store-image-status" alt="">
+                    </div>
+
+                    <div class="store-profile-data-info-container">
+                        <h3 class="poppins-semibold ellipsis">Guanzon Store dsadasd dsasd</h3>
+                        <h5 class="poppins-medium ellipsis">Barangay Ibingay Boulevard Masbate City</h5>
+                    </div>
+
+                    <div class="store-profile-data-actions-container">
+                        <h4 class="poppins-bold ellipsis">7:45 am - 5:56 pm</h4> 
+                    </div> 
+                </div>
+
+                <!-- Store Profile Bio -->
+                <div class="store-bio-container">
+                    <p class="poppins-light-italic">
+                        Maligayang pagdating sa TechHub—ang iyong one-stop shop para sa makabagong gadgets at accessories. Pinagsasama namin ang de-kalidad na produkto, personalisadong serbisyo, at walang katulad na halaga sa bawat pagbili. Sumali na at i-level up ang iyong tech experience!
+                    </p>
+                </div>
+
+                <!-- Store Product Display -->
+                <div class="store-product-container">
+
+                    <div class="store-product">
+
+                        <div class="store-product-image">
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="" class="store-product-image-svg" >
+                        </div>
+                        
+                        <div class="store-product-category">
+                            <span class="poppins-light">Produkto</span>
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="">
+                        </div>
+                        
+                        <img src="{% static 'assets/guest-selected-green-product.svg' %}" alt="" class="store-product-selected">
+
+                        <div class="store-product-available">
+                            <span class="poppins-light">Available sa Gabi</span>
+                        </div>
+                        <div class="store-product-info-container">
+                            <h5 class="poppins-regular ellipsis"> Hamburger Ni Titas sa kanto</h5>
+                            <h4 class="poppins-bold ellipsis">P 1,500.00</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="store-product">
+
+                        <div class="store-product-image">
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="" class="store-product-image-svg" >
+                        </div>
+                        
+                        <div class="store-product-category">
+                            <span class="poppins-light">Produkto</span>
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="">
+                        </div>
+                        
+                        <img src="{% static 'assets/guest-selected-green-product.svg' %}" alt="" class="store-product-selected">
+
+                        <div class="store-product-available">
+                            <span class="poppins-light">Available sa Gabi</span>
+                        </div>
+                        <div class="store-product-info-container">
+                            <h5 class="poppins-regular ellipsis"> Hamburger Ni Titas sa kanto</h5>
+                            <h4 class="poppins-bold ellipsis">P 1,500.00</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="store-product">
+
+                        <div class="store-product-image">
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="" class="store-product-image-svg" >
+                        </div>
+                        
+                        <div class="store-product-category">
+                            <span class="poppins-light">Produkto</span>
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="">
+                        </div>
+                        
+                        <img src="{% static 'assets/guest-selected-green-product.svg' %}" alt="" class="store-product-selected">
+
+                        <div class="store-product-available">
+                            <span class="poppins-light">Available sa Gabi</span>
+                        </div>
+                        <div class="store-product-info-container">
+                            <h5 class="poppins-regular ellipsis"> Hamburger Ni Titas sa kanto</h5>
+                            <h4 class="poppins-bold ellipsis">P 1,500.00</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="store-product">
+
+                        <div class="store-product-image">
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="" class="store-product-image-svg" >
+                        </div>
+                        
+                        <div class="store-product-category">
+                            <span class="poppins-light">Produkto</span>
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="">
+                        </div>
+                        
+                        <img src="{% static 'assets/guest-selected-green-product.svg' %}" alt="" class="store-product-selected">
+
+                        <div class="store-product-available">
+                            <span class="poppins-light">Available sa Gabi</span>
+                        </div>
+                        <div class="store-product-info-container">
+                            <h5 class="poppins-regular ellipsis"> Hamburger Ni Titas sa kanto</h5>
+                            <h4 class="poppins-bold ellipsis">P 1,500.00</h4>
+                        </div>
+
+                    </div>
+  
+
+                </div>
+
+
+            </div> 
+            <div class="user-fav-stores-fav-visit-button">
+                <button>
+                    <h6 class="poppins-light">bisitahin ang tindahan na ito</h6>
+                    <img src="{% static 'assets/form-right-arrow.svg' %}" alt="">
+                </button>
+            </div>
+            <div class="user-fav-stores-divider-2"></div>
+
+
+            
+        </div>
+    
+    </div>
+
+{% endblock bodyblock %}

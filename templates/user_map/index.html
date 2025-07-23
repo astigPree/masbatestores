@@ -1,0 +1,461 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block headblock %}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
+    <script src="{% static 'js/users/user-map.js' %}" defer></script> 
+    <link rel="stylesheet" href="{% static 'css/users/user-map.css' %}">
+{% endblock headblock %}
+
+
+
+{% block bodyblock %} 
+
+    <!--Map Layout-->
+    <div id="map"> </div>
+
+    <!-- Search Box -->
+    <div class="search-box-container">
+        <input type="text" id="search-box" placeholder="Humanap ng tindahan o produkto . . ." class="poppins-light">
+        <div class="map-mini-info-container">
+            <div class="map-mini-info">
+                <img src="{% static 'assets/guest-green-store.svg' %}" alt="">
+                <span class="poppins-light">Open Store</span>
+            </div>
+            <div class="map-mini-info">
+                <img src="{% static 'assets/guest-gray-store.svg' %}" alt="">
+                <span class="poppins-light">Close Store</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Action Buttons -->
+    <div class="actions-container">
+        <div class="action-button">
+            <img src="{% static 'assets/guest-search-icon.svg' %}" alt=""> 
+        </div>
+        <div class="action-button" id="near-me-button">
+            <img src="{% static 'assets/guest-person-circle.svg' %}" alt=""> 
+            <span class="poppins-light">near me</span>
+        </div>
+        <div class="action-button" id="map-button">
+            <img src="{% static 'assets/guest-3-fold-map.svg' %}" alt=""> 
+            <span class="poppins-light">maps</span>
+        </div>
+        <div class="action-button">
+            <img src="{% static 'assets/guest-user-account.svg' %}" alt=""> 
+            <span class="poppins-light">account</span>
+        </div> 
+        <div class="action-button">
+            <img src="{% static 'assets/guest-calculator.svg' %}" alt=""> 
+            <span class="poppins-light">calculator</span>
+        </div>
+    </div>
+
+
+    <!-- Action Hint Text -->
+    
+    {% comment %} <div class="actions-hint-container">
+        <div class="action-hint-text-empty"> 
+        </div>
+        <div class="action-hint-text" >
+            <span class="poppins-regular">Tingnan ang Mga Tindahan Sa loob ng 10km</span>
+            <img src="{% static 'assets/guest-arrow-hint-text.svg' %}" alt="">
+        </div>
+        <div class="action-hint-text" >
+            <span class="poppins-regular">Palitan ang Hitsura ng Mapa</span>
+            <img src="{% static 'assets/guest-arrow-hint-text.svg' %}" alt="">  
+        </div>
+        <div class="action-hint-text">
+            <span class="poppins-regular">Tingnan ang Screen para sa Customer o User</span>
+            <img src="{% static 'assets/guest-arrow-hint-text.svg' %}" alt="">
+        </div> 
+        <div class="action-hint-text">
+            <span class="poppins-regular">Tingnan ang Detalye ng Paninda at Kalkulasyon</span>
+            <img src="{% static 'assets/guest-arrow-hint-text.svg' %}" alt="">
+        </div>
+    </div>  {% endcomment %}
+
+    <!-- Store Section List -->
+    {% comment %} <div class="store-section-list-container" id="store-list-container">
+        <div class="store-section-header">
+            <div class="store-section-header-title">
+                <img src="{% static 'assets/guest-brown-store.svg' %}" alt="">
+                <h3 class="poppins-semibold ellipsis">Tindahang Malapit sa akin</h3>
+
+            </div>
+
+            <div class="store-section-header-button">
+                <span class="poppins-light">Close</span>
+                <img src="{% static 'assets/back-left-angled.svg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="store-section-divider">
+            <span></span>
+        </div>
+
+        <div class="stores-section-stores-list">
+            <div class="store-section-stores-list-wrapper">
+                
+                <!-- Store Data Display-->
+                <div class="store-data-container">
+                    
+                    <div class="store-image-container">
+                        <img src="{% static 'assets/guest-store-human.svg' %}" class="store-image-profile-svg" alt="">
+                        <img src="{% static 'assets/guest-green-store.svg' %}" class="store-image-status" alt="">
+                    </div>
+                    <div class="store-info-container">
+                        <h3 class="poppins-semibold ellipsis">Guanzon Store fadsfsdfsdf sf dsfsafds</h3>
+                        <h5 class="poppins-medium ellipsis">Barangay Ibingay Boulevard Mfdsfasbate Cityf adsdfddsfsd</h5>
+                        <div class="store-info-products-container scrollable-div">
+                            <!-- Store List  -->    
+                            <div class="store-info-products">
+
+                                <div class="store-info-product">
+                                    <img src="{% static 'assets/guest-product-category.svg' %}" alt="">
+                                    <p class="poppins-medium">Pagkaon Pagkaon ini mo</p>
+                                </div>
+
+                                <div class="store-info-product">
+                                    <img src="{% static 'assets/guest-product-category.svg' %}" alt="">
+                                    <p class="poppins-medium">Pagkaon</p>
+                                </div>
+
+                                <div class="store-info-product">
+                                    <img src="{% static 'assets/guest-product-category.svg' %}" alt="">
+                                    <p class="poppins-medium">Pagkaon</p>
+                                </div>
+
+
+                                <div class="store-info-product">
+                                    <img src="{% static 'assets/guest-product-category.svg' %}" alt="">
+                                    <p class="poppins-medium">Pagkaon ini mo</p>
+                                </div>
+
+ 
+
+
+                            </div>
+                        
+                        </div>
+                    </div>
+
+                    <div class="store-actions-container">
+                        <h4 class="poppins-light-italic ellipsis">7:45 am - 5:56 pm</h4>
+                        <div class="store-action-wrapper">
+
+                            <button class="store-action-button">
+                                <img src="{% static 'assets/guest-basket-icon.svg' %}" alt="">
+                            </button>
+
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+                
+                <!-- Store Data Display-->
+                <div class="store-data-container">
+                    
+                    <div class="store-image-container">
+                        <img src="{% static 'assets/guest-store-human.svg' %}" class="store-image-profile-svg" alt="">
+                        <img src="{% static 'assets/guest-gray-store.svg' %}" class="store-image-status" alt="">
+                    </div>
+                    <div class="store-info-container">
+                        <h3 class="poppins-semibold ellipsis">Guanzon Store fadsfsdfsdf sf dsfsafds</h3>
+                        <h5 class="poppins-medium ellipsis">Barangay Ibingay Boulevard Mfdsfasbate Cityf adsdfddsfsd</h5>
+                        <div class="store-info-products-container  scrollable-div">
+                            <!-- Store List  -->    
+                            <div class="store-info-products">
+
+                                <div class="store-info-product">
+                                    <img src="{% static 'assets/guest-service-category.svg' %}" alt="">
+                                    <p class="poppins-medium">Pagkaon Pagkaon ini mo</p>
+                                </div>
+
+                                <div class="store-info-product">
+                                    <img src="{% static 'assets/guest-service-category.svg' %}" alt="">
+                                    <p class="poppins-medium">Pagkaon</p>
+                                </div>
+
+                                <div class="store-info-product">
+                                    <img src="{% static 'assets/guest-service-category.svg' %}" alt="">
+                                    <p class="poppins-medium">Pagkaon</p>
+                                </div>
+
+
+                                <div class="store-info-product">
+                                    <img src="{% static 'assets/guest-service-category.svg' %}" alt="">
+                                    <p class="poppins-medium">Pagkaon ini mo</p>
+                                </div>
+
+ 
+
+
+                            </div>
+                        
+                        </div>
+                    </div>
+
+                    <div class="store-actions-container">
+                        <h4 class="poppins-light-italic ellipsis">7:45 am - 5:56 pm</h4>
+                        <div class="store-action-wrapper">
+
+                            <button class="store-action-button">
+                                <img src="{% static 'assets/guest-basket-icon.svg' %}" alt="">
+                            </button>
+
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+
+
+
+                
+            </div>
+
+        </div>
+
+    </div>  {% endcomment %}
+
+
+
+    <!-- Store Section List Empty -->
+    {% comment %} <div class="store-section-list-container animate-in" id="store-empty-list-container">
+        <div class="store-section-header">
+            <div class="store-section-header-title">
+                <img src="{% static 'assets/guest-brown-store.svg' %}" alt="">
+                <h3 class="poppins-semibold ellipsis">Tindahang Malapit sa akin</h3>
+
+            </div>
+
+            <div class="store-section-header-button" id="store-empty-list-button">
+                <span class="poppins-light">Close</span>
+                <img src="{% static 'assets/back-left-angled.svg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="store-section-divider">
+            <span></span>
+        </div>
+
+        <div class="stores-section-stores-list">
+            <div class="store-section-stores-list-wrapper">
+                  <img class="store-section-empty-icon" src="{% static 'assets/guest-store-human-empty.svg' %}" alt="">
+                  <h3 class="store-section-empy-text poppins-bold">Walang malapit na tindahan sa iyo</h3>
+
+            </div>
+
+        </div>
+
+    </div>  {% endcomment %}
+
+    <!-- Store Visit Screen -->
+    <div class="store-section-list-container animate-in" id="store-visit-container">
+        <div class="store-section-header">
+            <div class="store-section-header-title">
+                <img src="{% static 'assets/guest-brown-store.svg' %}" alt="">
+                <h3 class="poppins-semibold ellipsis">Tindahang Malapit sa akin</h3>
+
+            </div>
+
+            <div class="store-section-header-button" id="store-visit-button">
+                <span class="poppins-light">Close</span>
+                <img src="{% static 'assets/back-left-angled.svg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="store-section-divider">
+            <span></span>
+        </div>
+
+        <div class="stores-section-stores-list scrollable-div">
+            <div class="store-section-stores-list-wrapper">
+
+                <!-- Store Button Header -->
+                <div class="store-visit-header">
+                    <button>
+                        <img src="{% static 'assets/guest-arrow-right.svg' %}" alt="">
+                        <span class="poppins-medium">Tumingin sa iba</span>
+                    </button>
+                    <button>
+                        <span class="poppins-medium">Kausapin sila</span>
+                        <img src="{% static 'assets/guest-messenger.svg' %}" alt="">
+                    </button>
+                </div>
+
+                <!-- Store Background Image -->
+                <div class="store-background-image-container">
+                    <img src="" alt="">
+                    <div class="store-reviews-container">
+                        <span class="poppins-semibold">100k Reviews</span>
+                        <img src="{% static 'assets/guest-reviews-icon.svg' %}" alt="">
+                    </div> 
+                    <button class="store-fav-button">
+                        <span class="poppins-bold">Paborito Ko Ito</span>
+                        <img src="{% static 'assets/store-liked-icon.svg' %}" alt="">
+                    </button>
+                </div>
+
+                <!-- Store Profile Data -->
+                <div class="store-profile-data-container">
+                    <div class="store-profile-image-container">
+                        <img src="{% static 'assets/guest-store-human.svg' %}" class="store-image-profile-svg" alt="">
+                        <img src="{% static 'assets/guest-green-store.svg' %}" class="store-image-status" alt="">
+                    </div>
+
+                    <div class="store-profile-data-info-container">
+                        <h3 class="poppins-semibold ellipsis">Guanzon Store dsadasd dsasd</h3>
+                        <h5 class="poppins-medium ellipsis">Barangay Ibingay Boulevard Masbate City</h5>
+                    </div>
+
+                    <div class="store-profile-data-actions-container">
+                        <h4 class="poppins-bold ellipsis">7:45 am - 5:56 pm</h4> 
+                    </div>
+
+                    <div class="store-profile-distance-container">
+                        <div class="store-profile-distance-data">
+                            <span class="poppins-regular">10 hours 12 mins</span>
+                            <img src="{% static 'assets/guest-car.svg' %}" alt="">
+                        </div>
+                        <div class="store-profile-distance-data">
+                            <span class="poppins-regular">10 hours 12 mins</span>
+                            <img src="{% static 'assets/guest-motor.svg' %}" alt="">
+                        </div>
+                        <div class="store-profile-distance-data">
+                            <span class="poppins-regular">10 hours 12 mins</span>
+                            <img src="{% static 'assets/guest-walk.svg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Store Profile Bio -->
+                <div class="store-bio-container">
+                    <p class="poppins-light-italic">
+                        Maligayang pagdating sa TechHub—ang iyong one-stop shop para sa makabagong gadgets at accessories. Pinagsasama namin ang de-kalidad na produkto, personalisadong serbisyo, at walang katulad na halaga sa bawat pagbili. Sumali na at i-level up ang iyong tech experience!
+                    </p>
+                </div>
+
+                <!-- Store Product Display -->
+                <div class="store-product-container">
+
+                    <div class="store-product">
+
+                        <div class="store-product-image">
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="" class="store-product-image-svg" >
+                        </div>
+                        
+                        <div class="store-product-category">
+                            <span class="poppins-light">Produkto</span>
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="">
+                        </div>
+                        
+                        <img src="{% static 'assets/guest-selected-green-product.svg' %}" alt="" class="store-product-selected">
+
+                        <div class="store-product-available">
+                            <span class="poppins-light">Available sa Gabi</span>
+                        </div>
+                        <div class="store-product-info-container">
+                            <h5 class="poppins-regular ellipsis"> Hamburger Ni Titas sa kanto</h5>
+                            <h4 class="poppins-bold ellipsis">P 1,500.00</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="store-product">
+
+                        <div class="store-product-image">
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="" class="store-product-image-svg" >
+                        </div>
+                        
+                        <div class="store-product-category">
+                            <span class="poppins-light">Produkto</span>
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="">
+                        </div>
+                        
+                        <img src="{% static 'assets/guest-selected-green-product.svg' %}" alt="" class="store-product-selected">
+
+                        <div class="store-product-available">
+                            <span class="poppins-light">Available sa Gabi</span>
+                        </div>
+                        <div class="store-product-info-container">
+                            <h5 class="poppins-regular ellipsis"> Hamburger Ni Titas sa kanto</h5>
+                            <h4 class="poppins-bold ellipsis">P 1,500.00</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="store-product">
+
+                        <div class="store-product-image">
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="" class="store-product-image-svg" >
+                        </div>
+                        
+                        <div class="store-product-category">
+                            <span class="poppins-light">Produkto</span>
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="">
+                        </div>
+                        
+                        <img src="{% static 'assets/guest-selected-green-product.svg' %}" alt="" class="store-product-selected">
+
+                        <div class="store-product-available">
+                            <span class="poppins-light">Available sa Gabi</span>
+                        </div>
+                        <div class="store-product-info-container">
+                            <h5 class="poppins-regular ellipsis"> Hamburger Ni Titas sa kanto</h5>
+                            <h4 class="poppins-bold ellipsis">P 1,500.00</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="store-product">
+
+                        <div class="store-product-image">
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="" class="store-product-image-svg" >
+                        </div>
+                        
+                        <div class="store-product-category">
+                            <span class="poppins-light">Produkto</span>
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="">
+                        </div>
+                        
+                        <img src="{% static 'assets/guest-selected-green-product.svg' %}" alt="" class="store-product-selected">
+
+                        <div class="store-product-available">
+                            <span class="poppins-light">Available sa Gabi</span>
+                        </div>
+                        <div class="store-product-info-container">
+                            <h5 class="poppins-regular ellipsis"> Hamburger Ni Titas sa kanto</h5>
+                            <h4 class="poppins-bold ellipsis">P 1,500.00</h4>
+                        </div>
+
+                    </div>
+  
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="store-product-view-calculator-button">
+            <img src="{% static 'assets/guest-cart-green-check.svg' %}" alt="">
+            <h6 class="poppins-semibold"> mga pinili ko </h6>
+        </div>
+
+    </div> 
+
+
+{% endblock bodyblock %}
+    
