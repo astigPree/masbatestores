@@ -5,6 +5,7 @@ from datetime import datetime
 class MerchantData(models.Model):
     base_pk = models.BigIntegerField(null=True, blank=True)
     name = models.CharField(max_length=100)
+    display_name = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
     description = models.CharField(max_length=320)
     latitude = models.FloatField(null=True, blank=True)   
