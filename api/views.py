@@ -4,19 +4,12 @@ import json
 from django.http import HttpResponse, JsonResponse
 from django.middleware.csrf import get_token
 
-# Create your views here.
+
+#User -----------------------------------
 
 
-
-
-#User ----------------------
-
-
-
-
-
-# Merchant ---------------------------
-def registerMerchantRequest(request):
+# Merchant ------------------------------
+def registerMerchantRequest(request): # Request - Merchant Registration
     if request.method == 'POST':
         input_data = request.POST
         if not input_data:
@@ -89,7 +82,7 @@ def getMerchantFromId(merchantId): # Utility
     merchant = MerchantData.objects.get(pk=merchantId)
     return merchant
 
-def getAllProductsOfMerchant(request): # Request
+def getAllProductsOfMerchant(request): # Request - Use merchant's id to get all their products
     if request.method == 'POST':
         input_data = request.POST
         merchantId = input_data['merchant_id']
@@ -103,14 +96,11 @@ def getAllProductsOfMerchant(request): # Request
 
 
 #Paninda --------------------------------
-
 def listAllProducts(merchant): # Utility
     products = []
     for product in Paninda.objects.filter(merchant_pk=merchant.pk):
         products.append(product)
     return products
-
-
 
 def createInitialProducts(initial_products , merchantObject): # Utility
     status = {
