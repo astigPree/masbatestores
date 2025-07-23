@@ -5,10 +5,13 @@ def homepage(request):
     return render(request, 'home/index.html')
 
 
+# =============== MERCHANT PAGE ================
 
+def merchant_login(request):
+    return render(request, 'merchant_login/index.html')
 
-
-
+def merchant_page(request):
+    return render(request, 'merchant_page/index.html')
 
 # =============== USER PAGE ================
 def user_login_page(request):

@@ -103,7 +103,7 @@ body {
 /* profile options, btn */
 .profile-shop-options {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.5em 0;
   width: 90%;
   margin: 14px auto;
@@ -111,6 +111,7 @@ body {
 
 .profile-shop-btn {
   width: 90%;
+  max-width: 164px;
   justify-self: center;
   font: inherit;
   color: #644839;
