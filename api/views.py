@@ -74,15 +74,7 @@ def registerMerchantRequest(request): # Request - Merchant Registration
         return JsonResponse({'status': 'success', 'productErrors': productErrors } , status=200) 
     return JsonResponse({'csrfToken': get_token(request)})
 
-def getMerchantFromUsername(merchantUsername): # Utility
-    merchant = MerchantData.objects.get(name=merchantUsername)
-    return merchant
-
-def getMerchantFromId(merchantId): # Utility
-    merchant = MerchantData.objects.get(pk=merchantId)
-    return merchant
-
-def getAllProductsOfMerchant(request): # Request - Use merchant's id to get all their products
+def getAllProductsOfMerchantRequest(request): # Request - Use merchant's id to get all their products
     if request.method == 'POST':
         input_data = request.POST
         merchantId = input_data['merchant_id']
@@ -93,6 +85,14 @@ def getAllProductsOfMerchant(request): # Request - Use merchant's id to get all 
             return JsonResponse({"error": "Merchant not found"}, status=404)
         products = listAllProducts(merchant)
         return JsonResponse({"products": products}, status=200)
+
+def getMerchantFromUsername(merchantUsername): # Utility
+    merchant = MerchantData.objects.get(name=merchantUsername)
+    return merchant
+
+def getMerchantFromId(merchantId): # Utility
+    merchant = MerchantData.objects.get(pk=merchantId)
+    return merchant
 
 
 #Paninda --------------------------------
