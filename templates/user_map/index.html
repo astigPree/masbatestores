@@ -261,7 +261,7 @@
     </div>  {% endcomment %}
 
     <!-- Store Visit Screen -->
-    <div class="store-section-list-container animate-in" id="store-visit-container">
+    {% comment %} <div class="store-section-list-container animate-in" id="store-visit-container">
         <div class="store-section-header">
             <div class="store-section-header-title">
                 <img src="{% static 'assets/guest-brown-store.svg' %}" alt="">
@@ -449,12 +449,17 @@
         </div>
 
 
+        <div class="store-product-view-reviews-button">
+            <img src="{% static 'assets/user-review-icon.svg' %}" alt="">
+            <h6 class="poppins-semibold"> mga review </h6>
+        </div>
+        
         <div class="store-product-view-calculator-button">
             <img src="{% static 'assets/guest-cart-green-check.svg' %}" alt="">
             <h6 class="poppins-semibold"> mga pinili ko </h6>
         </div>
 
-    </div> 
+    </div>  {% endcomment %}
 
 
 {% endblock bodyblock %}

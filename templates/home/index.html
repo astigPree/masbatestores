@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/guest/home.css' %}">
     <script src="{% static 'js/guest/addition_dom.js' %}" defer></script>
     <script src="{% static 'js/guest/home.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'css/guest/store-review.css' %}">
 {% endblock headblock %}
 
 
@@ -711,6 +712,165 @@
         </div>
 
     </div> {% endcomment %}
+
+
+    <!-- Store Review Screen -->
+    {% comment %} <div class="store-review-container">
+        <div class="store-review-wrapper">
+
+            <!-- Store Review Store Header -->
+            <div class="store-review-header">
+                <img src="{% static 'assets/guest-store-human-review-store.svg' %}" alt="">
+                <h1 class="poppins-semibold">Masbatestores</h1>
+                <div class="store-review-close-button">
+                    <span class="poppins-medium">I-close Ito</span>
+                    <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+                </div>
+            </div>
+
+            <div class="store-review-store-background-image">
+                <img src="" alt="">    
+            </div>
+
+            <div class="store-review-store-account-container">
+                
+            </div>
+
+            <div class="store-review-profile-data-container">
+                <div class="store-review-profile-image-container">
+                    <img src="{% static 'assets/guest-store-human.svg' %}" class="store-image-profile-svg" alt="">
+                </div>
+
+                <div class="store-review-profile-data-info-container">
+                    <h3 class="poppins-semibold ellipsis">Guanzon Store dsadasd  dsasddsasddsasddsasddsasddsasd</h3>
+                    <h5 class="poppins-medium ellipsis">Barangay Ibingay Boulevard Masbate City</h5>
+                </div>
+ 
+ 
+            </div>
+
+            <div class="store-review-rate-selections">
+                <button class=" store-review-rate-button store-review-rate-selections-selected poppins-bold">All Reviews</button>
+                <button class=" store-review-rate-button poppins-bold">5 Stars</button>
+                <button class=" store-review-rate-button poppins-bold">4 Stars</button>
+                <button class=" store-review-rate-button poppins-bold">3 Stars</button>
+                <button class=" store-review-rate-button poppins-bold">2 - 1 Stars</button>
+            </div>
+
+            <div class="store-review-divider"></div>
+            
+            <div class="store-review-list-of-reviews-container">
+                <div class="store-review-list-of-review-wrapper">
+
+                    <!-- Empty Ratings Reviews Layout -->
+                   <div class="store-review-list-of-review-empty">
+                        <img src="{% static 'assets/guest-list-of-reviews-empty.svg' %}" alt="">
+                        <p class="poppins-medium">Wala pang review. Hikayatin ang iyong mga customer na mag-iwan ng feedback!</p>
+                    </div> 
+
+                    <!-- Rated Reviews Layout -->
+                    <div class="store-review-list-of-review-rated">
+
+                        <div class="store-review-user-review-container">
+                            <div class="store-review-user-review-header">
+                                <img src="{% static 'assets/guest-user-account.svg' %}" alt="">
+                                <h4 class="poppins-medium ellipsis">Anonymous</h4>
+                                <h6 class="poppins-bold">Hulyo 3, 2025</h6>
+                            </div>
+                            <p class="poppins-light">
+                                Napakabilis ng serbisyo at sobrang bait ng may-ari. Malinis din ang packaging at tama ang sukli. Babalik ako ulit dito, tiyak!
+                            </p>
+                            <div class="store-review-user-product-rated">
+                                <h4 class="poppins-extrabold">Product : </h4> <h6 class="poppins-regular">Hamburger</h6>
+                            </div>
+                            <div class="store-review-user-ratings-stars">
+                                <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                                <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                                <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                                <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                                <img src="{% static 'assets/review-unliked-star.svg' %}" alt="">
+                            </div>
+                            <div class="store-review-user-actions">
+                                <button>
+                                    <span class="poppins-extrabold">Reply</span>
+                                    <img src="{% static 'assets/review-reply-icon.svg' %}" alt="">
+                                </button>
+                                <button>
+                                    <span class="poppins-extrabold">Delete</span>
+                                    <img src="{% static 'assets/review-delete-icon.svg' %}" alt="">
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div> {% endcomment %}
+
+
+    <!-- Store Review Replies Form -->
+    {% comment %} <div class="store-review-replies-container">
+        <div class="store-review-replies-wrapper">
+
+            <div class="store-review-replies-header">
+                <button>
+                    <span class="poppins-medium">Bumalik sa reviews</span>
+                    <img src="{% static 'assets/back-down-icon.svg' %}" alt="">
+                </button>
+            </div>
+
+            
+            <div class="store-review-user-review-container store-review-replies-user-review-container">
+                <div class="store-review-user-review-header">
+                    <img src="{% static 'assets/guest-user-account.svg' %}" alt="">
+                    <h4 class="poppins-medium ellipsis">Anonymous</h4>
+                    <h6 class="poppins-bold">Hulyo 3, 2025</h6>
+                </div>
+                <p class="poppins-light">
+                    Napakabilis ng serbisyo at sobrang bait ng may-ari. Malinis din ang packaging at tama ang sukli. Babalik ako ulit dito, tiyak!
+                </p>
+                <div class="store-review-user-product-rated">
+                    <h4 class="poppins-extrabold">Product : </h4> <h6 class="poppins-regular">Hamburger</h6>
+                </div>
+                <div class="store-review-user-ratings-stars">
+                    <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                    <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                    <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                    <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                    <img src="{% static 'assets/review-unliked-star.svg' %}" alt="">
+                </div> 
+            </div>
+
+            <div class="store-review-replies-divider"></div>
+
+
+            <div class="store-review-replies-list-of-reviews">
+
+                <div class="store-review-user-review-container store-review-user-replies-container">
+                    <div class="store-review-user-review-header">
+                        <img src="{% static 'assets/guest-user-account.svg' %}" alt="">
+                        <h4 class="poppins-medium ellipsis">Anonymous</h4>
+                        <h6 class="poppins-bold">Hulyo 3, 2025</h6>
+                    </div>
+                    <p class="poppins-light">
+                        Napakabilis ng serbisyo at sobrang bait ng may-ari. Malinis din ang packaging at tama ang sukli. Babalik ako ulit dito, tiyak!
+                    </p> 
+                </div>
+
+
+            </div>
+
+        </div>
+    </div> {% endcomment %}
+
 
 {% endblock bodyblock %}
     
