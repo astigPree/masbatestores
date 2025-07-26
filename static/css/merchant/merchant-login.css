@@ -44,8 +44,9 @@ body {
   gap: 1em;
 }
 
-.login-desc img {
-  min-width: 146px;
+.login-title img {
+  width: 15px;
+  height: 19px;
 }
 
 .login svg{
