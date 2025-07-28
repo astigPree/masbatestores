@@ -7,7 +7,7 @@ urlpatterns = [
     # ============== MERCHANT PAGE ================
     path('merchant_login/', view=merchant_login, name='merchant_login'),
     path('merchant_page/', view=merchant_page, name='merchant_page'),
-
+    path('merchant_review/', view=merchant_review, name='merchant_review'),
     # ============== USER PAGE ================
     path('user_login/', user_login_page, name='user_login_page'),
     path('user_register/', user_register_page, name='user_register_page'),

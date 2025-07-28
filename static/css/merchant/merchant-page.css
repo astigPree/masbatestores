@@ -156,3 +156,30 @@ body {
 .store-product-container {
   margin: 0 auto;
 }
+
+/* merchant_review */
+.review-select-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0.95em;
+}
+
+.review-select-bar button {
+  width: 60px;
+  padding: 0.25em;
+  font: inherit;
+  font-size: 6px;
+  background-color: #CCAFA0;
+  color: #3D1A07;
+  border: none;
+  border-radius: 2px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.review-section hr {
+  border: 2.5px solid #916E5C;
+  border-radius: 2em;
+  width: 90%;
+  margin: 1em auto;
+}

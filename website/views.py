@@ -13,6 +13,8 @@ def merchant_login(request):
 def merchant_page(request):
     return render(request, 'merchant_page/index.html')
 
+def merchant_review(request):
+    return render(request, 'merchant_review/index.html')
 # =============== USER PAGE ================
 def user_login_page(request):
     return render(request, 'user_login/index.html')
