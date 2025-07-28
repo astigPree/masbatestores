@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+{% block headblock %} 
+    <link rel="stylesheet" href="{% static 'css/store/store-register.css' %}">
+{% endblock headblock %}
+
+
+
+
+{% block bodyblock %}
+
+    <div class="user-register-container">
+
+        <div class="user-register-wrapper">
+
+
+
+           <!-- Store Store Header -->
+            <div class="store-header">
+                <img src="{% static 'assets/guest-store-human-review-store.svg' %}" alt="">
+                <h1 class="poppins-semibold">Masbatestores</h1> 
+            </div>
+
+            <div class="masbatestore-footer-form-container">
+                <img src="{% static 'assets/form-storyset-store.svg' %}" alt="">
+                <div class="masbatestore-footer-descriptions">
+                    <p class="poppins-regular">
+                        Simulan na ang iyong negosyo—magrehistro bilang merchant at ipakilala ang mga paninda mo sa mas maraming customer!
+                    </p> 
+                </div>
+            </div>
+
+            <div class="form-container">
+
+                <h3 class="poppins-bold">Sumali Bilang Merchant</h3> 
+                <div class="form-input-container">
+                    <label for="username" class="poppins-regular">Pangalan ng Tindahan</label>
+                    <input type="text" name="username" class="poppins-light" placeholder="Halimbawa: Guanzon Sari-Sari Store">
+                </div>
+                <div class="form-input-container">
+                    <label for="username" class="poppins-regular">Address ng Tindahan</label>
+                    <input type="text" name="username" class="poppins-light" placeholder="Halimbawa: Barangay Ibingay Masbate City">
+                </div>
+                <div class="form-input-container">
+                    <label for="username" class="poppins-regular">Ipakilala ang Iyong Tindahan</label>
+                    <textarea name="" id="" class="poppins-light" placeholder="I-share kung paano nagsimula ang iyong negosyo o kung anong klase ng serbisyo ang inaalok mo."></textarea>
+                </div>
+                <div class="form-input-container">
+                    <label for="username" class="poppins-regular">Username</label>
+                    <input type="text" name="username" class="poppins-light" placeholder="Ilagay ang iyong gustong username">
+                </div>
+                <div class="form-input-container">
+                    <label for="username" class="poppins-regular">Password</label>
+                    <input type="text" name="username" class="poppins-light" placeholder="Gumamit ng hindi bababa sa 8 letra">
+                </div>
+                <div class="form-input-container">
+                    <label for="username" class="poppins-regular">Ulitin ang password</label>
+                    <input type="text" name="username" class="poppins-light" placeholder="Ulitin ang password">
+                </div>
+                <div class="form-input-container">
+                    <label for="username" class="poppins-regular">Facebook/Messager Name</label>
+                    <input type="text" name="username" class="poppins-light" placeholder="Facebook/Messager Name">
+                </div>
+                <div class="form-input-container">
+                    <label for="username" class="poppins-regular">Facebook/Messager Link (optional)</label>
+                    <input type="text" name="username" class="poppins-light" placeholder="Facebook/Messager Link (optional)">
+                </div>
+
+
+                <div class="form-note-header">
+                    <h3 class="poppins-semibold">Mga Panindang Ibebenta</h3>
+                    <h5 class="poppins-light">(Kailangan ng Hindi Bababa sa 1)</h5>
+                </div>
+                
+                <div class="form-container-divider-1"></div>
+
+                <div class="form-created-product-container">
+
+                    <div class="store-product">
+
+                        <div class="store-product-image">
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="" class="store-product-image-svg" >
+                        </div>
+                        
+                        <div class="store-product-category">
+                            <span class="poppins-light">Produkto</span>
+                            <img src="{% static 'assets/guest-empty-image-product.svg' %}" alt="">
+                        </div>
+                        
+ 
+                        <div class="store-product-available">
+                            <span class="poppins-light">Available sa Gabi</span>
+                        </div>
+                        <div class="store-product-info-container">
+                            <h5 class="poppins-regular ellipsis"> Hamburger Ni Titas sa kanto</h5>
+                            <h4 class="poppins-bold ellipsis">P 1,500.00</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="store-product store-register-add-product">
+                        <img src="{% static 'assets/store-add-item.svg' %}" class="store-product-add-icon" alt="">
+                        <h5 class="store-product-add-icon-text poppins-bold">Dumagdag Pa</h5>
+                    </div>
+
+
+
+
+                </div>
+
+
+
+                <div class="form-container-divider-2"></div>
+                
+                <div class="term-and-conditions-opener">
+                    <input type="checkbox" name="accept-term" id="">
+                    <a class="poppins-regular">
+                        Sumasang-ayon ako sa mga <span class="poppins-light-italic">Tuntunin ng Serbisyo</span> at <span class="poppins-light-italic">Patakaran sa Privacy</span> ng app.
+                    </a>
+                </div>
+
+                
+                <p class="form-container-footer poppins-light-italic">
+                    Ang pagsali bilang merchant ay nangangahulugan ng pagsunod sa mga alituntunin ng aming komunidad at platform. Responsibilidad ng merchant na tiyaking ligal ang mga produktong ibinebenta.
+                </p>
+
+                <div class="submit-button-container">
+                    <button>
+                        <span class="poppins-semibold">Simulan ang Pagbebenta!</span>
+                        <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+                    </button>
+                </div>
+
+            </div>
+
+
+            
+        </div>
+    </div>
+ 
+
+{% endblock bodyblock %}
+
+
+
+
+    
+{% block popupblock %}
+    
+<section class="popup-add-item-container">
+    <div class="popup-add-item-wrapper">
+
+        <button class="popup-add-item-close-button">
+            <span class="poppins-semibold">Umalis dito</span>
+            <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+        </button>
+
+        <div class="popup-add-item-header">
+            <img src="{% static 'assets/store-product-edit-icon.svg' %}" alt="">
+            <h3 class="poppins-bold">Magdagdag ng Bagong Paninda</h3>
+        </div>
+
+        <div class="popup-add-item-form">
+            <label for="" class="poppins-semibold">Pangalan ng Paninda</label>
+            <input type="text" class="poppins-regular" placeholder="Halimbawa: Saging na Saba">
+        </div>
+
+        <div class="popup-add-item-form">
+            <label for="" class="poppins-semibold">Presyo ng Paninda (pesos)</label>
+            <input type="number" class="poppins-regular" placeholder="Halimbawa: 50.00">
+        </div>
+
+        
+        <div class="popup-add-item-form">
+            <label for="" class="poppins-semibold">Available ba ang paninda ito tuwing?</label>
+            <select name="" id="">
+                <option value="">Laging Available</option>
+                <option value="">Available sa Umaga</option>
+                <option value="">Available sa Hapon</option>
+                <option value="">Available sa Gabi</option>
+                <option value="">Hindi Available</option> 
+            </select>
+        </div>
+
+
+        
+        <div class="popup-add-item-form">
+            <label for="" class="poppins-semibold">Uri ng paninda?</label>
+            <select name="" id="">
+                <option value="">Produkto</option>
+                <option value="">Serbisyo</option> 
+            </select>
+        </div>
+
+        
+        <div class="popup-add-item-form">
+            <label for="" class="poppins-semibold">Uri ng paninda?</label>
+            <div class="popup-add-item-image-holder">
+                <img src="{% static 'assets/store-upload-image.svg' %}" alt="">
+                <h6 class="poppins-semibold">Pindutin Ito para makaupload ng imahe</h6>
+            </div> 
+            <input type="file" name="" id="" style="visibility: hidden;">
+        </div>
+
+
+        <button class="popup-add-item-submit-button">
+            <span class="poppins-bold">I Save Ito</span>
+            <img src="{% static 'assets/store-cloud-upload.svg' %}" alt="">
+        </button>
+
+    </div>
+</section>
+
+
+{% endblock popupblock %}

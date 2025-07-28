@@ -462,5 +462,462 @@
     </div>  {% endcomment %}
 
 
+    <!-- View Store Facebook Account-->
+    {% comment %} <div class="store-facebook-container">
+        <div class="store-facebook-wrapper"> 
+
+            <div class="store-facebook-buttons"> 
+                <div class="store-facebook-button">
+                    <span class="poppins-regular">Nabasa ko na ito</span>
+                    <img src="{% static 'assets/back-down-icon.svg' %}" alt=""> 
+                </div> 
+            </div>
+
+            <div class="store-facebook-icon">
+                <img src="{% static 'assets/guest-facebook-pop-up.svg' %}" alt="">
+            </div>
+
+            <div class="store-facebook-data-container">
+                <h5 class="poppins-medium">Pangalan</h5>
+                <div class="store-facebook-data-input-container">
+                    <input type="text" class="poppins-regular" readonly placeholder="Pangalan ng tindahan sa facebook" value="Ericson Mark">
+                    <div class="store-copy-container">
+                        <img src="{% static 'assets/guest-copy-fb.svg' %}" alt="">
+                        <span class="poppins-medium">copy</span>
+
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="store-facebook-data-container">
+                <h5 class="poppins-medium">Link</h5>
+                <div class="store-facebook-data-input-container">
+                    <input type="text" class="poppins-regular" readonly placeholder="Pangalan ng tindahan sa facebook" value="https://www.facebook.com/makietech.guanzon/">
+                    <div class="store-copy-container">
+                        <img src="{% static 'assets/guest-copy-fb.svg' %}" alt="">
+                        <span class="poppins-medium">copy</span>
+
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="store-facebook-data-container">
+                <h5 class="poppins-medium">Address ng tindahan</h5>
+                <div class="store-facebook-data-input-container">
+                    <input type="text" class="poppins-regular" readonly placeholder="Pangalan ng tindahan sa facebook" value="https://www.facebook.com/makietech.guanzon/">
+                    <div class="store-copy-container">
+                        <img src="{% static 'assets/guest-copy-fb.svg' %}" alt="">
+                        <span class="poppins-medium">copy</span>
+
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="store-facebook-visit-button">
+                <a href="">
+                    <span class="poppins-bold">bisitahin sa Facebook</span>
+                    <img src="{% static 'assets/guest-store-human-visit.svg' %}" alt="">
+                </a>
+            </div>
+
+            <div class="store-facebook-visit-button">
+                <a href="">
+                    <span class="poppins-bold">bisitahin sa Goggle Map</span>
+                    <img src="{% static 'assets/fb-map-location.svg' %}" alt="">
+                </a>
+            </div>
+
+
+        </div>
+    </div>  {% endcomment %}
+
+
+
+    
+    <!-- Store Product Calculator -->
+    {% comment %} <div class="store-section-list-container animate-in">
+        
+        <div class="store-calculator-container">
+
+            <div class="store-calculator-warning-container">
+                <img src="{% static 'assets/guest-calculator-warning.svg' %}" alt="">
+                <h5 class="poppins-regular">Ang mga presyong ipinapakita ay batay sa impormasyong ibinigay ng merchant at para sa sanggunian lamang. Maaaring magbago ang aktwal na presyo at availability ng produkto. Mangyaring makipag-ugnayan muna sa merchant bago gumawa ng anumang desisyon.</h5>
+                <h6 class="poppins-extralight-italic">Hindi ito isang sistema ng pagbabayad o pag-order—ang mga kalkulasyon ay para lamang sa pagtatantya.</h6>
+            </div>
+            <div class="store-calculator-form-container">
+                <h3 class="poppins-extrabold">Kasalukuyang Pera</h3>
+                <div class="store-calculator-form-input">
+                    <span class="poppins-semibold">PHP</span>
+                    <input type="number" name="" id="" placeholder="example: 12000" class="poppins-regular">
+                </div>
+                <h4 class="poppins-semibold">-15,000</h4>
+                <span class="store-calculator-form-dvider"></span> 
+                <h2 class="poppins-semibold">-15,000</h2>
+
+                <button class="store-calculator-download">
+                    <span class="poppins-semibold">I-save sa PDF ang Paninda at Impormasyon ng mga napili</span>
+                    <img src="{% static 'assets/guest-pdf-button.svg' %}" alt="">
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="store-section-header">
+            <div class="store-section-header-title">
+                <img src="{% static 'assets/guest-calculator-selected-cart.svg' %}" alt="">
+                <h3 class="poppins-semibold ellipsis">Ang mga napili ko</h3>
+
+            </div>
+
+            <div class="store-section-header-button" >
+                <span class="poppins-light ellipsis">Close Calculator</span>
+                <img src="{% static 'assets/guest-calculator-close-arrow.svg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="store-section-divider">
+            <span></span>
+        </div>
+ 
+        <div class="store-product-view-calculator-button">
+            <img src="{% static 'assets/guest-cart-red-close.svg' %}" alt="">
+            <h6 class="poppins-semibold"> isira ito </h6>
+        </div>  
+
+        <div class="store-calculator-selected-container scrollable-div"> 
+            <div class="store-calculator-selected-wrapper">
+
+
+                <!-- Selected Product In Calculator Screen-->
+                <div class="store-calculator-selected">
+                    
+                    <button class="store-calculator-remove-selected">
+                        <img src="{% static 'assets/guest-calculator-remove.svg' %}" alt="">
+                    </button>
+                    
+                    <div class="store-calculator-selected-image">
+                        <img src="{% static 'assets/guest-calculator-empty-product-image.svg' %}" alt="" class="store-calculator-selected-image-svg">
+                        <span class="poppins-light">Available sa Gabi</span>
+                    </div>
+
+                    <div class="store-calculator-selected-info">
+                        <h4 class="poppins-semibold ellipsis">Guanzon Store</h4>
+                        <h5 class="poppins-regular ellipsis">Hamburger ni manong kano fdsfdfds af sdfsdf </h5>
+                        <div class="store-calculator-selected-calculation">
+                            <span class="store-calculator-selected-calculation-php poppins-black">PHP</span>
+                            <span class="store-calculator-selected-calculation-price poppins-regular">15</span>
+                            <img src="{% static 'assets/guest-calculation-multiply.svg' %}" alt="">
+                            <span class="store-calculator-selected-calculation-price poppins-regular">1</span>
+                            <span class="store-calculator-selected-calculation-price poppins-regular-italic">pieces</span>
+                        </div>
+                        <span class="store-calculator-selected-divider"></span>
+                        <div class="store-calculator-selected-calculation">
+                            <img src="{% static 'assets/guest-calculation-hand.svg' %}" alt=""> 
+                            <span class="store-calculator-selected-calculation-price poppins-bold">P 12,000</span>
+                        </div>
+                        
+                    </div>
+
+                    <div class="store-calculator-selected-actions">
+                        <button>
+                            <img src="{% static 'assets/guest-quantity-add.svg' %}" alt="">
+                        </button>
+                        <input type="number" name="" id="" value="1" class="poppins-regular">
+                        <button>
+                            <img src="{% static 'assets/guest-quantity-minus.svg' %}" alt="">
+                        </button>
+                    </div>
+
+                    <button class="store-calculator-visit-button">
+                        <span class="poppins-bold">bisitahin</span>
+                        <img src="{% static 'assets/guest-visit-button-store.svg' %}" alt="">
+                    </button> 
+                    
+                </div>
+
+
+
+
+
+
+
+            </div> 
+        </div>
+
+    </div>  {% endcomment %}
+
+
+    <!-- Store Review Screen -->
+    {% comment %} <div class="store-review-container">
+        <div class="store-review-wrapper">
+
+            <!-- Store Review Store Header -->
+            <div class="store-review-header">
+                <img src="{% static 'assets/guest-store-human-review-store.svg' %}" alt="">
+                <h1 class="poppins-semibold">Masbatestores</h1>
+                <div class="store-review-close-button">
+                    <span class="poppins-medium">I-close Ito</span>
+                    <img src="{% static 'assets/back-right-icon.svg' %}" alt="">
+                </div>
+            </div>
+
+            <div class="store-review-store-background-image">
+                <img src="" alt="">
+                <div class="store-review-report-button">
+                    <h6 class="poppins-medium">Ireklamo and tindahan na ito</h6>
+                    <img src="{% static 'assets/review-report-icon.svg' %}" alt="">
+                </div>
+            </div>
+ 
+
+            <div class="store-review-profile-data-container">
+                <div class="store-review-profile-image-container">
+                    <img src="{% static 'assets/guest-store-human.svg' %}" class="store-image-profile-svg" alt="">
+                </div>
+
+                <div class="store-review-profile-data-info-container">
+                    <h3 class="poppins-semibold ellipsis">Guanzon Store dsadasd  dsasddsasddsasddsasddsasddsasd</h3>
+                    <h5 class="poppins-medium ellipsis">Barangay Ibingay Boulevard Masbate City</h5>
+                </div> 
+            </div>
+
+            <div class="store-review-rate-selections">
+                <button class=" store-review-rate-button store-review-rate-selections-selected poppins-bold">All Reviews</button>
+                <button class=" store-review-rate-button poppins-bold">5 Stars</button>
+                <button class=" store-review-rate-button poppins-bold">4 Stars</button>
+                <button class=" store-review-rate-button poppins-bold">3 Stars</button>
+                <button class=" store-review-rate-button poppins-bold">2 - 1 Stars</button>
+            </div>
+
+            <div class="store-review-divider"></div>
+            
+            <div class="store-review-list-of-reviews-container">
+                <div class="store-review-list-of-review-wrapper">
+
+                    <!-- Empty Ratings Reviews Layout -->
+                    <div class="store-review-list-of-review-empty">
+                        <img src="{% static 'assets/guest-list-of-reviews-empty.svg' %}" alt="">
+                        <p class="poppins-medium">Wala pang review. Hikayatin ang iyong mga customer na mag-iwan ng feedback!</p>
+                    </div> 
+
+                    <!-- Rated Reviews Layout -->
+                    <div class="store-review-list-of-review-rated">
+
+                        <div class="store-review-user-review-container">
+                            <div class="store-review-user-review-header">
+                                <img src="{% static 'assets/guest-user-account.svg' %}" alt="">
+                                <h4 class="poppins-medium ellipsis">Anonymous</h4>
+                                <h6 class="poppins-bold">Hulyo 3, 2025</h6>
+                            </div>
+                            <p class="poppins-light">
+                                Napakabilis ng serbisyo at sobrang bait ng may-ari. Malinis din ang packaging at tama ang sukli. Babalik ako ulit dito, tiyak!
+                            </p>
+                            <div class="store-review-user-product-rated">
+                                <h4 class="poppins-extrabold">Product : </h4> <h6 class="poppins-regular">Hamburger</h6>
+                            </div>
+                            <div class="store-review-user-ratings-stars">
+                                <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                                <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                                <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                                <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                                <img src="{% static 'assets/review-unliked-star.svg' %}" alt="">
+                            </div>
+                            <div class="store-review-user-actions">
+                                <button>
+                                    <span class="poppins-extrabold">Reply</span>
+                                    <img src="{% static 'assets/review-reply-icon.svg' %}" alt="">
+                                </button>
+                                <button>
+                                    <span class="poppins-extrabold">Delete</span>
+                                    <img src="{% static 'assets/review-delete-icon.svg' %}" alt="">
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    
+                </div>
+
+            </div>
+
+            <button class="store-review-comment-button">
+                <h5 class="poppins-extrabold">Mag Review Sa Tindahan</h5>
+                <img src="{% static 'assets/review-comment-icon.svg' %}" alt="">
+            </button>
+
+
+        </div>
+
+    </div>  {% endcomment %}
+
+
+    <!-- Store Review Replies Form -->
+    {% comment %} <div class="store-review-replies-container">
+        <div class="store-review-replies-wrapper">
+
+            <div class="store-review-replies-header">
+                <button>
+                    <span class="poppins-medium">Bumalik sa reviews</span>
+                    <img src="{% static 'assets/back-down-icon.svg' %}" alt="">
+                </button>
+            </div>
+
+            
+            <div class="store-review-user-review-container store-review-replies-user-review-container">
+                <div class="store-review-user-review-header">
+                    <img src="{% static 'assets/guest-user-account.svg' %}" alt="">
+                    <h4 class="poppins-medium ellipsis">Anonymous</h4>
+                    <h6 class="poppins-bold">Hulyo 3, 2025</h6>
+                </div>
+                <p class="poppins-light">
+                    Napakabilis ng serbisyo at sobrang bait ng may-ari. Malinis din ang packaging at tama ang sukli. Babalik ako ulit dito, tiyak!
+                </p>
+                <div class="store-review-user-product-rated">
+                    <h4 class="poppins-extrabold">Product : </h4> <h6 class="poppins-regular">Hamburger</h6>
+                </div>
+                <div class="store-review-user-ratings-stars">
+                    <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                    <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                    <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                    <img src="{% static 'assets/review-liked-star.svg' %}" alt="">
+                    <img src="{% static 'assets/review-unliked-star.svg' %}" alt="">
+                </div> 
+            </div>
+
+            <div class="store-review-replies-divider"></div>
+
+
+            <div class="store-review-replies-list-of-reviews">
+
+                <div class="store-review-user-review-container store-review-user-replies-container">
+                    <div class="store-review-user-review-header">
+                        <img src="{% static 'assets/guest-user-account.svg' %}" alt="">
+                        <h4 class="poppins-medium ellipsis">Anonymous</h4>
+                        <h6 class="poppins-bold">Hulyo 3, 2025</h6>
+                    </div>
+                    <p class="poppins-light">
+                        Napakabilis ng serbisyo at sobrang bait ng may-ari. Malinis din ang packaging at tama ang sukli. Babalik ako ulit dito, tiyak!
+                    </p> 
+                </div>
+
+
+            </div>
+
+            <div class="store-review-reply-form-container">
+                <div class="store-review-reply-form-divider"></div>
+                <div class="store-review-reply-form-input">
+                    <textarea name="" id="" placeholder="Mag-reply sa review..." class="poppins-regular"></textarea>
+                    <button>
+                        <img src="{% static 'assets/review-reply-send.svg' %}" alt="">
+                        <span class="poppins-bold">Mag Reply</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>  {% endcomment %}
+
+    <!-- Store Report Screen Form -->
+    {% comment %} <div class="store-review-report-container">
+        <div class="store-review-report-wrapper">
+
+            <button class="store-review-report-close-button">
+                <span class="poppins-medium">Hindi ituloy yung pag report</span>
+                <img src="{% static 'assets/back-down-icon.svg' %}" alt="">
+            </button>
+
+            <div class="store-review-report-title">
+                <img src="{% static 'assets/review-report-icon.svg' %}" alt="">
+                <h3 class="poppins-bold">I-report ang Tindahan</h3>
+            </div>
+
+            <p class="store-review-report-information poppins-regular">
+                Ang ulat mo ay ipapadala sa admin para maimbestigahan. Sisiguraduhin naming maayos itong matutugunan ayon sa aming patakaran.
+            </p>
+            
+            <div class="store-review-report-form">
+                <label class="poppins-semibold">Paksa ng Ulat</label>
+                <input type="text" name="" id="" class="poppins-regular" placeholder="Hal. Maling impormasyon o hindi tamang produkto">
+            </div>
+
+            <div class="store-review-report-form">
+                <label class="poppins-semibold">Deskripsyon ng Problema</label>
+                <textarea name="" id="" class="poppins-regular" placeholder="Ibigay ang detalye kung bakit nais mong i-report ang tindahan na ito."></textarea>
+            </div>
+
+            <button class="store-review-report-submit-button">
+                <span class="poppins-bold">Ipadala ang report</span>
+                <img src="{% static 'assets/review-reply-send.svg' %}" alt="">
+            </button>
+
+
+        </div>
+    </div> {% endcomment %}
+
+    <!-- Store Review Comment Form -->
+    {% comment %} <div class="store-review-comment-container">
+        <div class="store-review-comment-wrapper">
+
+           <div class="store-review-replies-header">
+                <button>
+                    <span class="poppins-medium">Hindi ituloy yung pag review</span>
+                    <img src="{% static 'assets/back-down-icon.svg' %}" alt="">
+                </button>
+            </div> 
+            
+            <div class="store-review-comment-title">
+                <img src="{% static 'assets/review-comment-icon.svg' %}" alt="">
+                <h3 class="poppins-bold">Magbigay ng Review sa Tindahan</h3>
+            </div>
+
+            <p class="store-review-comment-information poppins-regular">
+                Ibahagi ang iyong karanasan sa tindahan! Makakatulong ang iyong review sa ibang user at magsisilbing gabay para sa merchant.
+            </p>
+            <div class="store-review-comment-form">
+                <label class="poppins-semibold">Deskripsyon ng Review</label>
+                <textarea name="" id="" class="poppins-regular" placeholder="Magbigay ng review o karanasan sa tindahan na ito."></textarea>
+            </div>
+
+            <div class="store-review-comment-form">
+                <label class="poppins-semibold">Isulat ang Panindang Bibilhan o Binili</label>
+                <input type="text" name="" id="" class="poppins-regular" placeholder="Isulat ang produkto/serbisyo ">
+            </div>
+
+            <div class="store-review-comment-rating-form">
+                <div class="store-review-comment-rating-stars">
+                    <button>
+                        <img src="{% static 'assets/review-commen-liked.svg' %}" alt="">
+                    </button>
+                    <button>
+                        <img src="{% static 'assets/review-commen-liked.svg' %}" alt="">
+                    </button>
+                    <button>
+                        <img src="{% static 'assets/review-commen-liked.svg' %}" alt="">
+                    </button>
+                    <button>
+                        <img src="{% static 'assets/review-commen-liked.svg' %}" alt="">
+                    </button>
+                    <button>
+                        <img src="{% static 'assets/review-commen-unliked.svg' %}" alt="">
+                    </button>
+                </div>
+                <label class="poppins-semibold">I-rate ang Tindahan</label> 
+            </div>
+            
+            <button class="store-review-comment-submit-button">
+                <span class="poppins-bold">Ipadala ang Review</span>
+                <img src="{% static 'assets/review-reply-send.svg' %}" alt="">
+            </button>
+
+        </div>
+    </div> {% endcomment %}
+
+
 {% endblock bodyblock %}
     

@@ -548,6 +548,7 @@
 
     </div> {% endcomment %}
 
+
     <!-- View Store Facebook Account-->
     {% comment %} <div class="store-facebook-container">
         <div class="store-facebook-wrapper"> 
@@ -575,6 +576,7 @@
                 </div>
                 
             </div>
+
             <div class="store-facebook-data-container">
                 <h5 class="poppins-medium">Link</h5>
                 <div class="store-facebook-data-input-container">
@@ -588,16 +590,36 @@
                 
             </div>
 
+            <div class="store-facebook-data-container">
+                <h5 class="poppins-medium">Address ng tindahan</h5>
+                <div class="store-facebook-data-input-container">
+                    <input type="text" class="poppins-regular" readonly placeholder="Pangalan ng tindahan sa facebook" value="https://www.facebook.com/makietech.guanzon/">
+                    <div class="store-copy-container">
+                        <img src="{% static 'assets/guest-copy-fb.svg' %}" alt="">
+                        <span class="poppins-medium">copy</span>
+
+                    </div>
+                </div>
+                
+            </div>
+
             <div class="store-facebook-visit-button">
                 <a href="">
-                    <span class="poppins-medium">Bisitahin</span>
+                    <span class="poppins-bold">bisitahin sa Facebook</span>
                     <img src="{% static 'assets/guest-store-human-visit.svg' %}" alt="">
+                </a>
+            </div>
+
+            <div class="store-facebook-visit-button">
+                <a href="">
+                    <span class="poppins-bold">bisitahin sa Goggle Map</span>
+                    <img src="{% static 'assets/fb-map-location.svg' %}" alt="">
                 </a>
             </div>
 
 
         </div>
-    </div> {% endcomment %}
+    </div>  {% endcomment %}
 
 
     <!-- Store Product Calculator -->

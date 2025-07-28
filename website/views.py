@@ -40,3 +40,25 @@ def user_fav_stores_page(request):
 
 def user_shopping_list_page(request):
     return render(request, 'user_shopping_list/index.html')
+
+
+def user_calculator_page(request):
+    return render(request, 'user_calculator/index.html')
+
+def user_map_page(request):
+    return render(request, 'user_map/index.html')
+
+
+
+
+# =============== TINDAHAN PAGE ================
+def store_login_page(request):
+    return render(request, 'store_login/index.html')
+
+def store_register_page(request):
+    return render(request, 'store_register/index.html')
+
+
+def store_profile_page(request):
+    return render(request, 'store_profile/index.html')
+
