@@ -13,9 +13,15 @@
 
 {% block bodyblock %}
 <div class="main-wrapper">
-  <div class="header-title">
-    <img src="{% static 'assets/guest-store-human-empty.svg' %}" alt="Guest Store"> 
-    <p class="poppins-semibold">Masbatestores</p>
+  <div class="header-title review-header">
+    <div>
+      <img src="{% static 'assets/guest-store-human-empty.svg' %}" alt="Guest Store"> 
+      <p class="poppins-semibold">Masbatestores</p`>
+    </div>
+    <div class="rh-right">
+      <p class="poppins-medium">Umalis dito</p>
+      {% inline_svg 'assets/back-right-icon.svg' %} 
+    </div>
   </div>
   <div class="cover"></div>
   <div class="profile-title">
@@ -38,7 +44,7 @@
       <button>2 - 1 stars</button>    
     </div><!--review-select-bar-->
     <hr>
-    <div class="review-list-container">
+    <div class="review-list-container" style="display: none">
       <div class="review-block">
         <div class="review-block-user">
           {% inline_svg 'assets/guest-user-account.svg' %} 
@@ -119,10 +125,90 @@
           </div>
         </div><!--review-options-->
       </div><!--review-block-->
-
-
     </div><!--review-list-container-->
+
+    <div class="review-list-container empty" style="display: flex">
+      {% inline_svg 'assets/merchant-review.svg' %} 
+      <h3 class="poppins-medium">Wala pang review. Hikayatin ang iyong mga customer na mag-iwan ng feedback!</h3>
+    </div><!--review-list-container empty-->
   </div><!--review-section-->
 </div><!--main-wrapper-->
+
+<!--MODALS-->
+<div class="modal-backdrop">
+  <div class="review-modal">
+    <div class="review-modal-header">
+      <p class="poppins-medium">Umalis sa review</p>
+      {% inline_svg 'assets/back-down-icon.svg' %}       
+    </div>
+    <div class="review-block">
+      <div class="review-block-user">
+        {% inline_svg 'assets/guest-user-account.svg' %} 
+        <div class="review-name">
+          <span class="poppins-medium review-sender">Anonymous</span>
+          <span class="poppins-bold">Hulyo 3, 2025</span>
+        </div>
+      </div>
+      <div class="review-content">
+        <p class="poppins-light">Napakabilis ng serbisyo at sobrang bait ng may-ari. Malinis din ang packaging at tama ang sukli. Babalik ako ulit dito, tiyak!</p>
+        <strong class="poppins-bold">Product: <span class="poppins-regular">Hamburger</span></strong>
+      </div>     
+      <div class="review-options">
+        <div class="review-stars">
+          {% inline_svg 'assets/review-liked-star.svg' %}
+          {% inline_svg 'assets/review-liked-star.svg' %} 
+          {% inline_svg 'assets/review-liked-star.svg' %} 
+          {% inline_svg 'assets/review-liked-star.svg' %}  
+          {% inline_svg 'assets/review-unliked-star.svg' %} 
+        </div>
+      </div><!--review-options-->
+    </div><!--review-block-->
+    <hr class="modal-hr">
+
+    <!-- if review has replies-->
+    <div class="sub-comment-container" style="display: none;">
+      <div class="review-block sub-comment">
+        <div class="review-block-user">
+          {% inline_svg 'assets/guest-user-account.svg' %} 
+          <div class="review-name">
+            <span class="poppins-medium review-sender">Anonymous</span>
+            <span class="poppins-bold">Hulyo 3, 2025</span>
+          </div>
+        </div>
+        <div class="review-content">
+          <p class="poppins-light">Napakabilis ng serbisyo at sobrang bait ng may-ari. Malinis din ang packaging at tama ang sukli. Babalik ako ulit dito, tiyak!</p>
+        </div>     
+      </div><!--review-block-->
+      <div class="review-block sub-comment">
+        <div class="review-block-user">
+          {% inline_svg 'assets/guest-user-account.svg' %} 
+          <div class="review-name">
+            <span class="poppins-medium review-sender">Anonymous</span>
+            <span class="poppins-bold">Hulyo 3, 2025</span>
+          </div>
+        </div>
+        <div class="review-content">
+          <p class="poppins-light">Napakabilis ng serbisyo at sobrang bait ng may-ari. Malinis din ang packaging at tama ang sukli. Babalik ako ulit dito, tiyak!</p>
+        </div>     
+      </div><!--review-block-->
+    </div><!--sub-comment-container-->
+    
+    <!--if review has no replies-->
+    <div class="sub-comment-container sub-empty">
+      {% inline_svg 'assets/merchant-review.svg' %} 
+      <h3 class="poppins-medium">Wala pang reply—pwede mo itong sagutin.</h3>
+    </div>    
+    
+    <hr class="modal-hr">
+    <div class="modal-send-reply">
+      <textarea class="poppins-regular" placeholder="Mag-reply sa review"></textarea>
+      <button class="poppins-extrabold">
+        {% inline_svg 'assets/review-reply-send.svg' %} 
+        Mag Reply
+      </button>
+    </div><!--modal-send-reply-->
+  </div><!--review-modal-->
+</div><!--modal-backdrop-->
+
 {% endblock bodyblock %}
     
