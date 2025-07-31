@@ -15,6 +15,10 @@ def merchant_page(request):
 
 def merchant_review(request):
     return render(request, 'merchant_review/index.html')
+
+def merchant_product(request):
+    return render(request, 'merchant_product/index.html')
+
 # =============== USER PAGE ================
 def user_login_page(request):
     return render(request, 'user_login/index.html')

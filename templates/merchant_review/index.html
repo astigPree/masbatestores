@@ -44,6 +44,7 @@
       <button>2 - 1 stars</button>    
     </div><!--review-select-bar-->
     <hr>
+    <!--if there are reviews-->
     <div class="review-list-container" style="display: none">
       <div class="review-block">
         <div class="review-block-user">
@@ -127,6 +128,7 @@
       </div><!--review-block-->
     </div><!--review-list-container-->
 
+    <!--if reviews are empty-->
     <div class="review-list-container empty" style="display: flex">
       {% inline_svg 'assets/merchant-review.svg' %} 
       <h3 class="poppins-medium">Wala pang review. Hikayatin ang iyong mga customer na mag-iwan ng feedback!</h3>
@@ -221,7 +223,7 @@
   </div><!--review-modal-->
 
   <!--processing-modal-->
-  <div class="process-loading" style="display: none;">
+  <div class="process-loading" style="display: none">
     {% inline_svg 'assets/base-proccess-store.svg' %} 
     <div class="loading-dot"></div>
     <div class="loading-dot"></div>
