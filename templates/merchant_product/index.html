@@ -47,11 +47,35 @@
         <p class="poppins-light">Available sa Gabi</p>
       </div>
       <div class="product-desc">
-        <p class="poppins-regular">Product name goes here</p>
+        {% inline_svg 'assets/pin-red.svg' %}  
+        <p class="poppins-regular">Hamburger Ni Titas Nilagang Pakas mo tosa pakas mo topakas mo sekawo mo pakas...</p>
         <p class="poppins-black">PHP: <span class="poppins-regular">15,000.00</span></p>
+        <div class="product-desc-options">
+          <p class="poppins-extrabold">Delete {% inline_svg 'assets/trash-bin.svg' %}</p>
+          <p class="poppins-extrabold">Baguhin {% inline_svg 'assets/write-note.svg' %}</p>
+        </div><!--product-desc-options-->
+      </div><!--product-desc-->
+    </div><!--product-block-->
+
+    <div class="product-block">
+      <div class="product-img">
+        <div class="product-type">
+          {% inline_svg 'assets/guest-empty-image-service.svg' %}  
+        </div> 
+        {% inline_svg 'assets/guest-empty-image-service.svg' %}  
+        <p class="poppins-light">Available sa Gabi</p>
       </div>
-    </div>
-  </div>
+      <div class="product-desc">
+        {% inline_svg 'assets/pin-red.svg' %}  
+        <p class="poppins-regular">Hamburger Ni Titas Nilagang</p>
+        <p class="poppins-black">PHP: <span class="poppins-regular">15,000.00</span></p>
+        <div class="product-desc-options">
+          <p class="poppins-extrabold">Delete {% inline_svg 'assets/trash-bin.svg' %}</p>
+          <p class="poppins-extrabold">Baguhin {% inline_svg 'assets/write-note.svg' %}</p>
+        </div><!--product-desc-options-->
+      </div><!--product-desc-->
+    </div><!--product-block-->
+  </div><!--review-section-->
 </div><!--main-wrapper-->
 {% endblock bodyblock %}
     

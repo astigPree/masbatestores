@@ -445,25 +445,29 @@ body {
 .loading-dot:nth-child(6) { animation-delay: 0.5s; }
 
 /* merchant-product */
+
+.product-block-container {
+ 
+}
 .product-block {
   background-color: #4B352A;
   min-height: 100px;
   display: flex;
   color: #CCAFA0;
+  border-radius: 4px;
+  margin: 1em auto;
 }
 
 .product-img {
   background-color: #916E5C;
-  width: 100px;
-  position: relative; /* Important to position children absolutely inside */
+  width: 20%;
+  min-width: 100px;
+  position: relative; 
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
-
-.product-img svg {
-  margin: auto;
+  border-radius: 4px;
 }
 
 .product-img svg:first-child {
@@ -480,10 +484,7 @@ body {
   left: 0;
   z-index: 2;
   display: flex;
-}
-
-.product-desc {
-  padding: 1em;
+  border-radius: 4px 0 4px 0;
 }
 
 .product-img p {
@@ -495,4 +496,48 @@ body {
   padding: 0.25em;
   padding-right: 1em;
   background: #3D1A07;
+  border-radius: 0 4px 0 4px;
+}
+
+.product-desc {
+  position: relative;
+  width: 80%;
+  padding: 1em;
+}
+
+/* the red pin in product desc */
+.product-desc > svg:first-of-type {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.product-desc > p:first-of-type {
+  color: #FFFFFF;
+  padding-right: 0.75em;
+}
+
+.product-desc > p {
+  font-size: 10px;
+  margin: 0.5em 0;
+}
+
+.product-desc-options {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 7px;
+  background-color: #CCAFA0;
+  color: #4B352A;
+  padding: 0.75em 2em;
+  border-radius: 4px 0 4px 0;
+  width: 126px;
+}
+
+.product-desc-options p {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
