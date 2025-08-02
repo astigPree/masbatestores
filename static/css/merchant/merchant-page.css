@@ -445,10 +445,6 @@ body {
 .loading-dot:nth-child(6) { animation-delay: 0.5s; }
 
 /* merchant-product */
-
-.product-block-container {
- 
-}
 .product-block {
   background-color: #4B352A;
   min-height: 100px;
@@ -540,4 +536,39 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5em;
+}
+
+.add-product {
+  background-color: #CCAFA0;
+  border: 2px solid #3D1A07;
+  border-radius: 4px;
+  width: 56px;
+  min-height: 51px;
+  font-size: 6px;
+  display: flex;
+  flex-direction: column;
+  color: #3D1A07;
+  text-align: center;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 200;
+}
+
+.add-product svg {
+  width: 25px;
+  height: 25px;
+  margin: auto;
+}
+
+/* merchant-product - empty */
+.empty-products {
+  color: #CCAFA0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1em;
+  font-size: 12px;
+  margin: 4em 0;
 }

@@ -38,6 +38,7 @@
       <button>Serbisyo</button>    
     </div><!--review-select-bar-->
     <hr>
+    {% comment %}
     <div class="product-block">
       <div class="product-img">
         <div class="product-type">
@@ -75,6 +76,17 @@
         </div><!--product-desc-options-->
       </div><!--product-desc-->
     </div><!--product-block-->
+    {% endcomment %}
+    <!--if there are no product-->
+    <div class="empty-products">
+      {% inline_svg 'assets/merchant-product-shop.svg' %}
+      <p class="poppins-medium">Wala ka pang produktong naka-post—magdagdag na para masimulan nang makita ng mga customer ang iyong tindahan!</p>
+    </div>
+    
+    <div class="add-product">
+      {% inline_svg 'assets/store-add-item.svg' %}
+      <p class="poppins-semibold">dumagdag</p>
+    </div>
   </div><!--review-section-->
 </div><!--main-wrapper-->
 {% endblock bodyblock %}
