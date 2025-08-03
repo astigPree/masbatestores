@@ -89,5 +89,119 @@
     </div>
   </div><!--review-section-->
 </div><!--main-wrapper-->
+
+<!--MODAL-->
+<div class="modal-backdrop" style="display: none;">
+  <!--I-edit ang Detalye ng Paninda-->
+  <div class="add-product-form" style="display: none;">
+    <div class="form-header">
+      <div class="form-left">
+        {% inline_svg 'assets/write-note.svg' %}<p class="poppins-semibold">I-edit ang Detalye ng Paninda</p>
+      </div>
+      <div class="form-right">
+        <p class="poppins-medium">Umalis dito</p>{% inline_svg 'assets/back-down-icon.svg' %}
+      </div>
+    </div>
+
+    <form class="poppins-regular">
+      <label for="">Pangalan ng Paninda</label>
+      <input placeholder="Halimbawa: Saging ng saba" class="poppins-light">
+      <label for="">Presyo ng Paninda <em class="poppins-extralight-italic">(pesos)</em></label>
+      <input placeholder="Halimbawa: Saging ng saba" class="poppins-light">
+      <label>Available ba ang paninda na to?</label>
+      <select class="poppins-light">
+        <option>Laging Available</option>
+        <option>Minsan hehe</option>
+      </select>
+      <label>Uri ng paninda</label>
+      <select class="poppins-light">
+        <option>Produkto</option>
+        <option>Serbisyo</option>
+      </select>
+      <label>Larawan ng produkto</label>
+      <div class="form-add-product-img">
+        {% inline_svg 'assets/store-upload-image.svg' %}
+        <p class="poppins-semibold">Pindutin ito para makaupload ng imahe</p>
+      </div>
+
+      <button class="poppins-black">
+        I-update
+        {% inline_svg 'assets/store-cloud-upload.svg' %}
+      </button>
+    </form>
+  </div><!--add-product-form-->
+
+  <!--Magdagdag ng Bagong Paninda-->
+  <div class="add-product-form" style="display: none">
+    <div class="form-header">
+      <div class="form-left">
+        {% inline_svg 'assets/write-note.svg' %}<p class="poppins-semibold">Magdagdag ng Bagong Paninda</p>
+      </div>
+      <div class="form-right">
+        <p class="poppins-medium">Umalis dito</p>{% inline_svg 'assets/back-down-icon.svg' %}
+      </div>
+    </div>
+
+    <form class="poppins-regular">
+      <label for="">Pangalan ng Paninda</label>
+      <input placeholder="Halimbawa: Saging ng saba" class="poppins-light">
+      <label for="">Presyo ng Paninda <em class="poppins-extralight-italic">(pesos)</em></label>
+      <input placeholder="Halimbawa: Saging ng saba" class="poppins-light">
+      <label>Available ba ang paninda na to?</label>
+      <select class="poppins-light">
+        <option>Laging Available</option>
+        <option>Available sa Umaga</option>
+        <option>Available sa Hapon</option>
+        <option>Available sa Gabi</option>
+        <option>Hindi Available</option>
+      </select>
+      <label>Uri ng paninda</label>
+      <select class="poppins-light">
+        <option>Produkto</option>
+        <option>Serbisyo</option>
+      </select>
+      <label>Larawan ng produkto</label>
+      <div class="form-add-product-img">
+        {% inline_svg 'assets/store-upload-image.svg' %}
+        <p class="poppins-semibold">Pindutin ito para makaupload ng imahe</p>
+      </div>
+
+      <button class="poppins-black">
+        I-save
+        {% inline_svg 'assets/store-cloud-upload.svg' %}
+      </button>
+    </form>
+  </div><!--add-product-form-->
+
+  <!--processing-modal-->
+  <div class="process-loading" style="display: none">
+    {% inline_svg 'assets/base-proccess-store.svg' %} 
+    <div class="loading-dot"></div>
+    <div class="loading-dot"></div>
+    <div class="loading-dot"></div>
+    <div class="loading-dot"></div>
+    <div class="loading-dot"></div>
+    <div class="loading-dot"></div>
+    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 55"> 
+      <path d="M16.1931 8.57457C18.3049 7.02027 18.7566 4.04584 17.2023 1.93319C15.6464 -0.177757 12.6728 -0.6303 10.5619 0.924857C8.44921 2.48001 7.99752 5.45349 9.55182 7.56539C11.1077 9.67793 14.0805 10.1296 16.1931 8.57457Z" fill="#4B352A"></path>
+      <path d="M6.85879 16.1458L7.17385 15.3907C7.25139 15.2058 7.16553 14.9948 6.98379 14.919L0.810839 12.3488C0.629203 12.273 0.419197 12.3621 0.342511 12.5488L0.0283008 13.3022C-0.0482785 13.4873 0.0357669 13.699 0.217509 13.7747L6.39046 16.344C6.57306 16.4208 6.78221 16.3301 6.85879 16.1458Z" fill="#4B352A"></path> 
+      <path d="M34.4581 25.7585C35.1799 25.0376 35.1807 23.8667 34.459 23.145L28.0202 16.1095L23.1899 10.8316C23.0966 10.7382 22.9932 10.6625 22.8907 10.5875C20.8364 8.36902 16.8737 9.48571 15.5477 12.1717L12.2125 18.9331L5.43618 16.418C4.49526 16.0213 3.4111 16.4622 3.01359 17.403C2.61768 18.3431 3.05774 19.4265 3.99867 19.8232L12.5092 23.8635C13.8468 24.4385 14.9085 23.7202 15.2844 23.0767C15.3061 23.0409 15.9236 21.6117 15.9236 21.6117L17.3462 30.0323L12.4433 52.0561C12.1433 53.0687 12.8299 54.1655 13.9784 54.5071C15.1268 54.8471 16.3018 54.3021 16.6019 53.2895L21.3831 40.1302L21.8974 42.3471C21.9407 42.5762 22.0107 42.7938 22.1016 42.9987C22.1833 43.2071 22.2865 43.4096 22.4191 43.603L30.1339 53.4386C30.813 54.4244 32.1631 54.6737 33.149 53.9935C34.1357 53.3152 34.385 51.9651 33.7057 50.9784L27.6478 40.8252L24.8542 19.353L31.8446 25.7584C32.5663 26.4802 33.7364 26.4802 34.4581 25.7585Z" fill="#4B352A"></path> 
+    </svg>
+    <p class="poppins-regular">Ina-update ang paninda... Sandali lang.</p>
+  </div>
+
+  <!--processing-modal failed-->
+  <div class="process-loading" style="display: none;">
+    {% inline_svg 'assets/base-proccess-error.svg' %}
+    <p class="poppins-regular">Nagkaproblema sa pag-update ng paninda. Pakisubukang muli.</p>
+  </div>
+
+  <!--processing-modal success-->
+  <div class="process-loading" style="display: none;">
+    {% inline_svg 'assets/base-proccess-success.svg' %}
+    <p class="poppins-regular">Tagumpay! Na-update na ang paninda.</p>
+  </div>
+
+</div><!--modal-backdrop-->
 {% endblock bodyblock %}
     
