@@ -93,7 +93,7 @@
 <!--MODAL-->
 <div class="modal-backdrop" style="display: none;">
   <!--I-edit ang Detalye ng Paninda-->
-  <div class="add-product-form" style="display: none;">
+  <div class="modal-window add-product-form" style="display: none">
     <div class="form-header">
       <div class="form-left">
         {% inline_svg 'assets/write-note.svg' %}<p class="poppins-semibold">I-edit ang Detalye ng Paninda</p>
@@ -132,7 +132,7 @@
   </div><!--add-product-form-->
 
   <!--Magdagdag ng Bagong Paninda-->
-  <div class="add-product-form" style="display: none">
+  <div class="modal-window add-product-form" style="display: none">
     <div class="form-header">
       <div class="form-left">
         {% inline_svg 'assets/write-note.svg' %}<p class="poppins-semibold">Magdagdag ng Bagong Paninda</p>
@@ -173,6 +173,15 @@
     </form>
   </div><!--add-product-form-->
 
+  <div class="modal-window delete-product-block" style="display: none;">
+    <p class="poppins-semibold">Burahin ang paninda?</p>
+    <p class="poppins-regular">Sigurado ka bang gusto mong i-delete ang panindang ito? Hindi na ito maibabalik.</p> 
+    <div class="button-group">
+      <button class="poppins-semibold delete">Burahin</button>
+      <button class="poppins-semibold default">Kanselahin</button>
+    </div>
+  </div>
+
   <!--processing-modal-->
   <div class="process-loading" style="display: none">
     {% inline_svg 'assets/base-proccess-store.svg' %} 
@@ -201,7 +210,6 @@
     {% inline_svg 'assets/base-proccess-success.svg' %}
     <p class="poppins-regular">Tagumpay! Na-update na ang paninda.</p>
   </div>
-
 </div><!--modal-backdrop-->
 {% endblock bodyblock %}
     

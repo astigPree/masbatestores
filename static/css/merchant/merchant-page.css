@@ -574,13 +574,17 @@ body {
 }
 
 /* add product merchant */
-.add-product-form {
+.modal-window {
   width: 90%;
   max-width: 360px;
   background-color: #CCAFA0;
   padding: 1em;
   border: 2px solid #3D1A07;
   border-radius: 4px;
+}
+
+.add-product-form {
+  color: #4B352A;
 }
 
 .form-header {
@@ -666,4 +670,39 @@ body {
   align-items: center;
   gap: 1em;
   box-shadow: 0 4px 4px 0 #00000025;
+}
+
+/* modal: burahin ang paninda? */
+.delete-product-block {
+  color: #4B352A;
+  font-size: 10px;
+  max-width: 300px;
+  padding: 1.5em;
+}
+
+.delete-product-block > p:nth-child(2) {
+  margin: 2em auto;
+  width: 100%;
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.delete-product-block button {
+  border: none;
+  border-radius: 4px 0 4px 0;
+  padding: 0.5em 1.5em;
+  color: #FFFFFF;
+  font-size: 10px;
+}
+
+.delete-product-block button {
+  background-color: #644839;
+}
+
+.delete-product-block .delete {
+  background-color: #A02222;
 }
