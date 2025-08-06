@@ -1,5 +1,8 @@
-const viewReviewEl = document.getElementById("view_review")
-
-viewReviewEl.addEventListener("click", () =>{
-  
+flatpickr("#timepicker", {
+  enableTime: true,
+  noCalendar: true,
+  dateFormat: "H:i",
+  altInput: true,
+  altFormat: "h:i K",
+  time_24hr: false
 });

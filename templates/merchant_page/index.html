@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <script src="{% static 'js/merchant/merchant.js' %}" defer></script>
-
+    <!--Flatpickr-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 {% endblock headblock %}
 
 {% block bodyblock %}
@@ -86,5 +88,198 @@
     </div><!--store product container-->
   </div><!--shop-offer-wrapper-->
 </div><!--main-wrapper-->
+
+<!--MODAL-->
+<div class="modal-backdrop">
+  <div class="modal-window shop-hours">
+    <div class="shop-hours-header">
+      {% inline_svg 'assets/modal-time-shop.svg' %}
+      <p class="poppins-medium">Pumili ng mga araw kung kailan bukas ang iyong tindahan, at itakda ang oras ng pagbubukas at pagsasara para sa bawat araw. Maari mong i-update ito kahit kailan.</p>
+    </div>
+    <form>
+      <!--monday-->
+      <div class="day-options">
+        <div class="day-option-left">
+          <input type="checkbox"><span class="poppins-medium">Lunes / Monday</span> 
+        </div>
+        <div class="day-option-right">
+          <span class="poppins-medium">Palaging Bukas</span><input type="checkbox">           
+        </div>
+      </div>
+      <div class="day-time">
+        <div class="day-time-left">
+          <div class="timepicker-wrapper">
+            <input id="timepicker" type="text" placeholder="--:-- --" class="poppins-medium">
+            {% inline_svg 'assets/clock.svg' %}
+          </div>
+          <p class="poppins-black">opening time</p>
+        </div>
+        <div class="day-time-right">
+          <div class="timepicker-wrapper">
+            <input id="timepicker" type="text" placeholder="--:-- --" class="poppins-medium">
+            {% inline_svg 'assets/clock.svg' %}
+          </div>
+          <p class="poppins-black">opening time</p>
+        </div>
+      </div><!--day-time-->
+
+      <!--tuesday-->
+      <div class="day-options">
+        <div class="day-option-left">
+          <input type="checkbox"><span class="poppins-medium">Martes / Tuesday</span> 
+        </div>
+        <div class="day-option-right">
+          <span class="poppins-medium">Palaging Bukas</span><input type="checkbox">           
+        </div>
+      </div>
+      <div class="day-time">
+        <div class="day-time-left">
+          <div class="timepicker-wrapper">
+            <input id="timepicker" type="text" placeholder="--:-- --" class="poppins-medium">
+            {% inline_svg 'assets/clock.svg' %}
+          </div>
+          <p class="poppins-black">opening time</p>
+        </div>
+        <div class="day-time-right">
+          <div class="timepicker-wrapper">
+            <input id="timepicker" type="text" placeholder="--:-- --" class="poppins-medium">
+            {% inline_svg 'assets/clock.svg' %}
+          </div>
+          <p class="poppins-black">opening time</p>
+        </div>
+      </div><!--day-time-->
+
+      <!--wednesday-->
+      <div class="day-options">
+        <div class="day-option-left">
+          <input type="checkbox"><span class="poppins-medium">Miyerkules / Wednesday</span> 
+        </div>
+        <div class="day-option-right">
+          <span class="poppins-medium">Palaging Bukas</span><input type="checkbox">           
+        </div>
+      </div>
+      <div class="day-time">
+        <div class="day-time-left">
+          <div class="timepicker-wrapper">
+            <input id="timepicker" type="text" placeholder="--:-- --" class="poppins-medium">
+            {% inline_svg 'assets/clock.svg' %}
+          </div>
+          <p class="poppins-black">opening time</p>
+        </div>
+        <div class="day-time-right">
+          <div class="timepicker-wrapper">
+            <input id="timepicker" type="text" placeholder="--:-- --" class="poppins-medium">
+            {% inline_svg 'assets/clock.svg' %}
+          </div>
+          <p class="poppins-black">opening time</p>
+        </div>
+      </div><!--day-time-->
+   
+      <!--tuesday-->
+      <div class="day-options">
+        <div class="day-option-left">
+          <input type="checkbox"><span class="poppins-medium">Huwebes / Thursday</span> 
+        </div>
+        <div class="day-option-right">
+          <span class="poppins-medium">Palaging Bukas</span><input type="checkbox">           
+        </div>
+      </div>
+      <div class="day-time">
+        <div class="day-time-left">
+          <div class="timepicker-wrapper">
+            <input id="timepicker" type="text" placeholder="--:-- --" class="poppins-medium">
+            {% inline_svg 'assets/clock.svg' %}
+          </div>
+          <p class="poppins-black">opening time</p>
+        </div>
+        <div class="day-time-right">
+          <div class="timepicker-wrapper">
+            <input id="timepicker" type="text" placeholder="--:-- --" class="poppins-medium">
+            {% inline_svg 'assets/clock.svg' %}
+          </div>
+          <p class="poppins-black">opening time</p>
+        </div>
+      </div><!--day-time-->
+   
+      <!--friday-->
+      <div class="day-options">
+        <div class="day-option-left">
+          <input type="checkbox"><span class="poppins-medium">Biyernes / Friday</span> 
+        </div>
+        <div class="day-option-right">
+          <span class="poppins-medium">Palaging Bukas</span><input type="checkbox">           
+        </div>
+      </div>
+      <div class="day-time">
+        <div class="day-time-left">
+          <div class="timepicker-wrapper">
+            <input id="timepicker" type="text" placeholder="--:-- --" class="poppins-medium">
+            {% inline_svg 'assets/clock.svg' %}
+          </div>
+          <p class="poppins-black">opening time</p>
+        </div>
+        <div class="day-time-right">
+          <div class="timepicker-wrapper">
+            <input id="timepicker" type="text" placeholder="--:-- --" class="poppins-medium">
+            {% inline_svg 'assets/clock.svg' %}
+          </div>
+          <p class="poppins-black">opening time</p>
+        </div>
+      </div><!--day-time-->
+
+      <!--saturday-->
+      <div class="day-options">
+        <div class="day-option-left">
+          <input type="checkbox"><span class="poppins-medium">Sabado / Saturday</span> 
+        </div>
+        <div class="day-option-right">
+          <span class="poppins-medium">Palaging Bukas</span><input type="checkbox">           
+        </div>
+      </div>
+      <div class="day-time">
+        <div class="day-time-left">
+          <div class="timepicker-wrapper">
+            <input id="timepicker" type="text" placeholder="--:-- --" class="poppins-medium">
+            {% inline_svg 'assets/clock.svg' %}
+          </div>
+          <p class="poppins-black">opening time</p>
+        </div>
+        <div class="day-time-right">
+          <div class="timepicker-wrapper">
+            <input id="timepicker" type="text" placeholder="--:-- --" class="poppins-medium">
+            {% inline_svg 'assets/clock.svg' %}
+          </div>
+          <p class="poppins-black">opening time</p>
+        </div>
+      </div><!--day-time-->
+
+      <!--sunday-->
+      <div class="day-options">
+        <div class="day-option-left">
+          <input type="checkbox"><span class="poppins-medium">Linggo / Sunday</span> 
+        </div>
+        <div class="day-option-right">
+          <span class="poppins-medium">Palaging Bukas</span><input type="checkbox">           
+        </div>
+      </div>
+      <div class="day-time">
+        <div class="day-time-left">
+          <div class="timepicker-wrapper">
+            <input id="timepicker" type="text" placeholder="--:-- --" class="poppins-medium">
+            {% inline_svg 'assets/clock.svg' %}
+          </div>
+          <p class="poppins-black">opening time</p>
+        </div>
+        <div class="day-time-right">
+          <div class="timepicker-wrapper">
+            <input id="timepicker" type="text" placeholder="--:-- --" class="poppins-medium">
+            {% inline_svg 'assets/clock.svg' %}
+          </div>
+          <p class="poppins-black">opening time</p>
+        </div>
+      </div><!--day-time-->
+    </form>
+  </div>
+</div>
 {% endblock bodyblock %}
     

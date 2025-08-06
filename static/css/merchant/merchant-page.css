@@ -581,6 +581,8 @@ body {
   padding: 1em;
   border: 2px solid #3D1A07;
   border-radius: 4px;
+  max-height: 90vh; /* 🧠 Limit modal height */
+  overflow-y: auto;  /* ✅ Enables scroll */
 }
 
 .add-product-form {
@@ -706,3 +708,110 @@ body {
 .delete-product-block .delete {
   background-color: #A02222;
 }
+
+/* merchant-page modal */
+.shop-hours-header {
+  color: #644839;
+  display: flex;
+  font-size: 8px;
+  gap: 1em;
+  text-wrap: balance;
+}
+
+.shop-hours-header svg {
+  min-width: 40px;
+  height: 38px;
+}
+
+.day-options {
+  display: flex;
+  justify-content: space-between;
+  color: #3D1A07;
+  margin: 0.5em 0;
+}
+
+.day-option-left {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.day-options input{
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #916E5C;
+  border: 1px solid #3D1A07;
+  border-radius: 2px;
+}
+
+.day-options input:checked {
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 1.95286C13 2.17733 12.9217 2.36813 12.7652 2.52525L6.6929 8.61953L5.55226 9.76431C5.3957 9.92144 5.20559 10 4.98194 10C4.75828 10 4.56817 9.92144 4.41161 9.76431L3.27097 8.61953L0.234839 5.57239C0.0782796 5.41526 0 5.22447 0 5C0 4.77553 0.0782796 4.58474 0.234839 4.42761L1.37548 3.28283C1.53204 3.1257 1.72215 3.04714 1.94581 3.04714C2.16946 3.04714 2.35957 3.1257 2.51613 3.28283L4.98194 5.76599L10.4839 0.23569C10.6404 0.0785634 10.8305 0 11.0542 0C11.2778 0 11.468 0.0785634 11.6245 0.23569L12.7652 1.38047C12.9217 1.5376 13 1.7284 13 1.95286Z' fill='%233D1A07'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+
+.day-option-left input {
+  width: 15px;
+  height: 15px;
+}
+
+.day-option-right input {
+  width: 10px;
+  height: 10px;
+}
+
+.day-option-right {
+  font-size: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.day-time {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 6em;
+  font-size: 7px;
+  text-align: center;
+  color: #3D1A07;
+}
+
+.day-time-left,
+.day-time-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+/* styling for the time picker */
+.timepicker-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #916E5C;
+  padding: 0.25em 1em;
+  border-radius: 4px;
+  gap: 0.5em;
+}
+
+.timepicker-wrapper input{
+  font-size: 10px;
+  border: none;
+  background: none;
+  color: #3D1A07;
+  width: 60px;
+  text-align: center;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+}
+
+.timepicker-wrapper input::placeholder{
+  color: #3D1A07;
+}
+
+.timepicker-wrapper input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
