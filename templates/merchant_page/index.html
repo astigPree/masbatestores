@@ -90,8 +90,8 @@
 </div><!--main-wrapper-->
 
 <!--MODAL-->
-<div class="modal-backdrop">
-  <div class="modal-window shop-hours">
+<div class="modal-backdrop" style="display: none">
+  <div class="modal-window shop-hours" style="display: none;">
     <div class="shop-hours-header">
       {% inline_svg 'assets/modal-time-shop.svg' %}
       <p class="poppins-medium">Pumili ng mga araw kung kailan bukas ang iyong tindahan, at itakda ang oras ng pagbubukas at pagsasara para sa bawat araw. Maari mong i-update ito kahit kailan.</p>
@@ -278,8 +278,29 @@
           <p class="poppins-black">opening time</p>
         </div>
       </div><!--day-time-->
+
+      <button class="poppins-medium">Tapos Na, I-save!</button>
     </form>
+  </div><!--shop-hours-->
+
+  <!--processing-modal-->
+  <div class="process-loading" style="display: none" >
+    {% inline_svg 'assets/base-proccess-store.svg' %} 
+    <div class="loading-dot"></div>
+    <div class="loading-dot"></div>
+    <div class="loading-dot"></div>
+    <div class="loading-dot"></div>
+    <div class="loading-dot"></div>
+    <div class="loading-dot"></div>
+    {% inline_svg 'assets/base-process-person.svg' %}
+    <p class="poppins-regular">Pakihintay habang ina-update ang oras ng pagbubukas at pagsasara ng tindahan…</p>
   </div>
-</div>
+
+  <!--processing-modal failed-->
+  <div class="process-loading" style="display: none;">
+    {% inline_svg 'assets/base-proccess-error.svg' %}
+    <p class="poppins-regular">Hindi naisagawa ang pagbabago sa oras ng tindahan. I-refresh ang pahina at subukang muli.</p>
+  </div>
+</div><!--modal-backdrop-->
 {% endblock bodyblock %}
     

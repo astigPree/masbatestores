@@ -815,3 +815,14 @@ body {
   box-shadow: none;
 }
 
+.shop-hours button {
+  border: none;
+  padding: 0.5em;
+  font-size: 10px;
+  color: #3D1A07;
+  background-color: #916E5C;
+  box-shadow: 0 4px 4px 0 #00000050;
+  border-radius: 2px;
+  margin: 2em 0 0 auto;
+  display: block;
+}
